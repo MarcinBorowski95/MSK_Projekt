@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<objectModel DTDversion="1516.2" name="MSKfom" type="FOM"
+             version="1.0">
+    <objects>
+        <objectClass
+                name="HLAobjectRoot"
+                sharing="Neither">
+            <attribute
+                    name="HLAprivilegeToDeleteObject"
+                    dataType="NA"
+                    updateType="NA"
+                    updateCondition="NA"
+                    ownership="NoTransfer"
+                    sharing="Neither"
+                    dimensions="NA"
+                    transportation="HLAreliable"
+                    order="TimeStamp" />
+            <objectClass
+                    name="Bankomat"
+                    sharing="PublishSubscribe"
+                    semantics="NA">
+                <attribute
+                        name="stock"
+                        dataType="HLAinteger16BE"
+                        updateType="Conditional"
+                        updateCondition="NA"
+                        ownership="NoTransfer"
+                        sharing="PublishSubscribe"
+                        dimensions="NA"
+                        transportation="HLAreliable"
+                        order="TimeStamp"
+                        semantics="NA" />
+                <attribute
+                        name="queue"
+                        dataType="HLAinteger16BE"
+                        updateType="Conditional"
+                        updateCondition="NA"
+                        ownership="NoTransfer"
+                        sharing="PublishSubscribe"
+                        dimensions="NA"
+                        transportation="HLAreliable"
+                        order="TimeStamp"
+                        semantics="NA" />
+                <attribute
+                        name="working"
+                        dataType="HLAinteger16BE"
+                        updateType="Conditional"
+                        updateCondition="NA"
+                        ownership="NoTransfer"
+                        sharing="PublishSubscribe"
+                        dimensions="NA"
+                        transportation="HLAreliable"
+                        order="TimeStamp"
+                        semantics="NA" />
+            </objectClass>
+            <objectClass
+                    name="Gui"
+                    sharing="PublishSubscribe"
+                    semantics="NA">
+                <attribute
+                        name="czasObslugi"
+                        dataType="HLAinteger16BE"
+                        updateType="Conditional"
+                        updateCondition="NA"
+                        ownership="NoTransfer"
+                        sharing="PublishSubscribe"
+                        dimensions="NA"
+                        transportation="HLAreliable"
+                        order="TimeStamp"
+                        semantics="NA" />
+                <attribute
+                        name="liczbaNaplywajacychKlientow"
+                        dataType="HLAinteger16BE"
+                        updateType="Conditional"
+                        updateCondition="NA"
+                        ownership="NoTransfer"
+                        sharing="PublishSubscribe"
+                        dimensions="NA"
+                        transportation="HLAreliable"
+                        order="TimeStamp"
+                        semantics="NA" />
+                <attribute
+                        name="okresCzasuNaplywu"
+                        dataType="HLAinteger16BE"
+                        updateType="Conditional"
+                        updateCondition="NA"
+                        ownership="NoTransfer"
+                        sharing="PublishSubscribe"
+                        dimensions="NA"
+                        transportation="HLAreliable"
+                        order="TimeStamp"
+                        semantics="NA" />
+                <attribute
+                        name="liczbaOkienek"
+                        dataType="HLAinteger16BE"
+                        updateType="Conditional"
+                        updateCondition="NA"
+                        ownership="NoTransfer"
+                        sharing="PublishSubscribe"
+                        dimensions="NA"
+                        transportation="HLAreliable"
+                        order="TimeStamp"
+                        semantics="NA" />
+            </objectClass>
+        </objectClass>
+    </objects>
+    <interactions>
+        <interactionClass
+                name="HLAinteractionRoot"
+                sharing="PublishSubscribe"
+                dimensions="NA"
+                transportation="HLAreliable"
+                order="Receive">
+            <interactionClass
+                    name="koniecSymulacji"
+                    sharing="PublishSubscribe"
+                    dimensions="NA"
+                    transportation="HLAreliable"
+                    order="Receive"
+                    semantics="NA">
+            </interactionClass>
+            <interactionClass
+                    name="AddMoney"
+                    sharing="PublishSubscribe"
+                    dimensions="NA"
+                    transportation="HLAreliable"
+                    order="Receive"
+                    semantics="NA">
+                <parameter name="Quantity" dataType="HLAfixedArray" updateType="Conditional"
+                           updateCondition="NA" ownership="NoTransfer" sharing="PublishSubscribe"
+                           dimensions="NA" transportation="HLAreliable" order="TimeStamp"
+                           semantics="NA" />
+            </interactionClass>
+            <interactionClass
+                    name="GetMoney"
+                    sharing="PublishSubscribe"
+                    dimensions="NA"
+                    transportation="HLAreliable"
+                    order="Receive"
+                    semantics="NA">
+                <parameter name="Quantity" dataType="HLAfixedArray" updateType="Conditional"
+                           updateCondition="NA" ownership="NoTransfer" sharing="PublishSubscribe"
+                           dimensions="NA" transportation="HLAreliable" order="TimeStamp"
+                           semantics="NA" />
+            </interactionClass>
+            <interactionClass
+                    name="AddClient"
+                    sharing="PublishSubscribe"
+                    dimensions="NA"
+                    transportation="HLAreliable"
+                    order="Receive"
+                    semantics="NA">
+            </interactionClass>
+            <interactionClass
+                    name="ClientLeave"
+                    sharing="PublishSubscribe"
+                    dimensions="NA"
+                    transportation="HLAreliable"
+                    order="Receive"
+                    semantics="NA">
+            </interactionClass>
+            <interactionClass
+                    name="StopWorking"
+                    sharing="PublishSubscribe"
+                    dimensions="NA"
+                    transportation="HLAreliable"
+                    order="Receive"
+                    semantics="NA">
+            </interactionClass>
+            <interactionClass
+                    name="InformNoMoney"
+                    sharing="PublishSubscribe"
+                    dimensions="NA"
+                    transportation="HLAreliable"
+                    order="Receive"
+                    semantics="NA">
+            </interactionClass>
+        </interactionClass>
+    </interactions>
+</objectModel>

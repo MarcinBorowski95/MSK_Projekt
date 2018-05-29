@@ -90,7 +90,7 @@ public class BankomatAmbassador extends NullFederateAmbassador {
         if( interactionClass.equals(federate.getMoneyHandle) )
         {
             builder.append( " (GetMoney)" );
-            int qty = EncodingHelpers.decodeInt(theParameters.get(0));
+            int qty = EncodingHelpers.decodeInt(theParameters.get(federate.getQuantityHandle));
             log("qty: " + qty);
             externalEvents.add(new BankomatExternalEvent(qty, BankomatExternalEvent.EventType.GetMoney, time));
         }

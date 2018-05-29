@@ -15,6 +15,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
+import java.net.URL;
 
 
 public class BankomatFederate {
@@ -45,6 +46,8 @@ public class BankomatFederate {
     protected InteractionClassHandle clientLeaveHandle;
     protected InteractionClassHandle stopWorkingHandle;
     protected InteractionClassHandle informNoMoneyHandle;
+    protected ParameterHandle addQuantityHandle;
+    protected ParameterHandle getQuantityHandle;
 
 
     private void log( String message )
@@ -84,16 +87,16 @@ public class BankomatFederate {
         // restaurant FOM modules covering processes, food and drink
         try
         {
-//            URL[] modules = new URL[]{
-//                    (new File("foms/Bankomat.xml")).toURI().toURL(),
-//            };
-//            rtiamb.createFederationExecution( "MSKProjektFederation", modules );
-//            log( "Created Federation" );
+            URL[] modules = new URL[]{
+                    (new File("foms/MSK_Fom.xml")).toURI().toURL(),
+            };
+            rtiamb.createFederationExecution( "MSKProjektFederation", modules );
+            log( "Created Bankomat" );
 
-            File fom = new File( "MSK_Projekt.fed" );
-            rtiamb.createFederationExecution( "MSKProjektFederation",
-                    fom.toURI().toURL() );
-            log( "Created Federation from Bankomat" );
+//            File fom = new File( "MSK_Projekt.fed" );
+//            rtiamb.createFederationExecution( "MSKProjektFederation",
+//                    fom.toURI().toURL() );
+//            log( "Created Federation from MSK_Fom.xml" );
         }
         catch( FederationExecutionAlreadyExists exists )
         {
@@ -291,10 +294,13 @@ public class BankomatFederate {
         rtiamb.subscribeObjectClassAttributes( bankomatHandle, attributes);
 
         addMoneyHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.AddMoney" );
+        addQuantityHandle = rtiamb.getParameterHandle(this.addMoneyHandle, "Quantity");
         fedamb.addMoneyHandle = addMoneyHandle;
         rtiamb.subscribeInteractionClass( addMoneyHandle );
 
+
         getMoneyHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.GetMoney" );
+        getQuantityHandle = rtiamb.getParameterHandle(this.getMoneyHandle, "Quantity");
         fedamb.getMoneyHandle = getMoneyHandle;
         rtiamb.subscribeInteractionClass( getMoneyHandle );
 

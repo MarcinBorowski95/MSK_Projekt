@@ -18,6 +18,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Random;
 
 public class KlientFederate {
@@ -80,16 +81,16 @@ public class KlientFederate {
         // restaurant FOM modules covering processes, food and drink
         try
         {
-//            URL[] modules = new URL[]{
-//                    (new File("foms/Bankomat.xml")).toURI().toURL(),
-//            };
-//            rtiamb.createFederationExecution( "MSKProjektFederation", modules );
-//            log( "Created Federation" );
-
-            File fom = new File( "MSK_Projekt.fed" );
-            rtiamb.createFederationExecution( "MSKProjektFederation",
-                    fom.toURI().toURL() );
+            URL[] modules = new URL[]{
+                    (new File("foms/MSK_Fom.xml")).toURI().toURL(),
+            };
+            rtiamb.createFederationExecution( "MSKProjektFederation", modules );
             log( "Created Federation from Klient" );
+
+//            File fom = new File( "MSK_Projekt.fed" );
+//            rtiamb.createFederationExecution( "MSKProjektFederation",
+//                    fom.toURI().toURL() );
+//            log( "Created Federation from Klient" );
         }
         catch( FederationExecutionAlreadyExists exists )
         {
@@ -177,7 +178,7 @@ public class KlientFederate {
         Random random = new Random();
         int quantityInt = random.nextInt(10000) + 1;
         byte[] quantity = EncodingHelpers.encodeInt(quantityInt);
-        quantityHandle = rtiamb.getParameterHandle( getMoneyHandle, "quantity" );
+        quantityHandle = rtiamb.getParameterHandle( getMoneyHandle, "Quantity" );
 
 
         parameters.put(quantityHandle, quantity);
