@@ -1,4 +1,4 @@
-package Bankomat;
+package Obsluga;
 
 import hla.rti.jlc.EncodingHelpers;
 import hla.rti1516e.*;
@@ -7,13 +7,13 @@ import hla.rti1516e.time.HLAfloat64Time;
 
 import java.util.ArrayList;
 
-public class BankomatAmbassador extends NullFederateAmbassador {
+public class ObslugaAmbassador extends NullFederateAmbassador {
 
 
     //----------------------------------------------------------
     //                   INSTANCE VARIABLES
     //----------------------------------------------------------
-    private BankomatFederate federate;
+    private ObslugaFederate federate;
 
     // these variables are accessible in the package
     protected double federateTime        = 0.0;
@@ -28,24 +28,21 @@ public class BankomatAmbassador extends NullFederateAmbassador {
 
     protected boolean running            = true;
 
+    public InteractionClassHandle StopWorkingHandle;
     public InteractionClassHandle addMoneyHandle;
-    public InteractionClassHandle getMoneyHandle;
-    public InteractionClassHandle addClientHandle;
-    public InteractionClassHandle clientLeaveHandle;
-    public InteractionClassHandle stopWorkingHandle;
-    public InteractionClassHandle informNoMoneyHandle;
+    public InteractionClassHandle NoMoneyHandle;
 
-    protected ArrayList<BankomatExternalEvent> externalEvents = new ArrayList<>();
+    protected ArrayList<ObslugaExternalEvent> externalEvents = new ArrayList<>();
     //----------------------------------------------------------
 
-    public BankomatAmbassador( BankomatFederate federate )
+    public ObslugaAmbassador( ObslugaFederate federate )
     {
         this.federate = federate;
     }
 
     private void log( String message )
     {
-        System.out.println( "BankomatAmbassador: " + message );
+        System.out.println( "ObslugaAmbassador: " + message );
     }
 
     @Override
@@ -82,34 +79,10 @@ public class BankomatAmbassador extends NullFederateAmbassador {
 
         // print the handle and handle interaction
         builder.append( " handle=" + interactionClass );
-        if( interactionClass.equals(federate.addMoneyHandle) )
+        if( interactionClass.equals(federate.NoMoneyHandle) )
         {
-            builder.append( " (AddMoney)" );
-            int qty = EncodingHelpers.decodeInt(theParameters.get(federate.addQuantityHandle));
-            log("qty: " + qty);
-            externalEvents.add(new BankomatExternalEvent(qty, BankomatExternalEvent.EventType.AddMoney, time));
-        }
-        if( interactionClass.equals(federate.getMoneyHandle) )
-        {
-            builder.append( " (GetMoney)" );
-            int qty = EncodingHelpers.decodeInt(theParameters.get(federate.getQuantityHandle));
-            log("qty: " + qty);
-            externalEvents.add(new BankomatExternalEvent(qty, BankomatExternalEvent.EventType.GetMoney, time));
-        }
-        if( interactionClass.equals(federate.addClientHandle) )
-        {
-            builder.append( " (AddClient)" );
-            externalEvents.add(new BankomatExternalEvent(BankomatExternalEvent.EventType.AddClient, time));
-        }
-        if( interactionClass.equals(federate.clientLeaveHandle) )
-        {
-            builder.append( " (ClientLeave)" );
-            externalEvents.add(new BankomatExternalEvent(BankomatExternalEvent.EventType.ClientLeave, time));
-        }
-        if( interactionClass.equals(federate.stopWorkingHandle) )
-        {
-            builder.append( " (StopWorking)" );
-            externalEvents.add(new BankomatExternalEvent(BankomatExternalEvent.EventType.StopWorking, time));
+            builder.append( " (NoMoney)" );
+            externalEvents.add(new ObslugaExternalEvent(ObslugaExternalEvent.EventType.NoMoney, time));
         }
 
         // print the tag
@@ -156,7 +129,7 @@ public class BankomatAmbassador extends NullFederateAmbassador {
     public void announceSynchronizationPoint( String label, byte[] tag )
     {
         log( "Synchronization point announced: " + label );
-        if( label.equals(BankomatFederate.READY_TO_RUN) )
+        if( label.equals(ObslugaFederate.READY_TO_RUN) )
             this.isAnnounced = true;
     }
 
@@ -164,7 +137,7 @@ public class BankomatAmbassador extends NullFederateAmbassador {
     public void federationSynchronized( String label, FederateHandleSet failed )
     {
         log( "Federation Synchronized: " + label );
-        if( label.equals(BankomatFederate.READY_TO_RUN) )
+        if( label.equals(ObslugaFederate.READY_TO_RUN) )
             this.isReadyToRun = true;
     }
 

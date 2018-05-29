@@ -1,10 +1,8 @@
-package Klient;
+package Obsluga;
 
 import hla.rti.jlc.EncodingHelpers;
 import hla.rti1516e.*;
-import hla.rti1516e.encoding.ByteWrapper;
 import hla.rti1516e.encoding.EncoderFactory;
-import hla.rti1516e.encoding.HLAinteger16BE;
 import hla.rti1516e.exceptions.FederatesCurrentlyJoined;
 import hla.rti1516e.exceptions.FederationExecutionAlreadyExists;
 import hla.rti1516e.exceptions.FederationExecutionDoesNotExist;
@@ -12,7 +10,6 @@ import hla.rti1516e.exceptions.RTIexception;
 import hla.rti1516e.time.HLAfloat64Interval;
 import hla.rti1516e.time.HLAfloat64Time;
 import hla.rti1516e.time.HLAfloat64TimeFactory;
-import org.portico.impl.hla1516e.types.encoding.HLA1516eEncoderFactory;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -21,32 +18,31 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Random;
 
-public class KlientFederate {
+public class ObslugaFederate {
 
     //Punkt Synchronizacji
     public static final String READY_TO_RUN = "ReadyToRun";
 
     //Główne zmienne
     private RTIambassador rtiamb;
-    private KlientAmbassador fedamb;
+    private ObslugaAmbassador fedamb;
     private HLAfloat64TimeFactory timeFactory; // set when we join
     protected EncoderFactory encoderFactory;     // set when we join
 
     //Zmienne Bankomatu
-    private final double timeStep           = 10.0;
-    private int nrKlient = 0;
+    private final double timeStep           = 1.0;
 
     //Zmienne Handle
-    private AttributeHandle nrKlientHandle;
-    protected InteractionClassHandle getMoneyHandle;
-    protected InteractionClassHandle addClientHandle;
+    protected InteractionClassHandle addMoneyHandle;
+    protected InteractionClassHandle StopWorkingHandle;
+    protected InteractionClassHandle NoMoneyHandle;
     protected ParameterHandle quantityHandle;
 
 
 
     private void log( String message )
     {
-        System.out.println( "KlientFederate   : " + message );
+        System.out.println( "ObslugaFederate   : " + message );
     }
 
     private void waitForUser()
@@ -73,7 +69,7 @@ public class KlientFederate {
         encoderFactory = RtiFactoryFactory.getRtiFactory().getEncoderFactory();
 
         log( "Connecting..." );
-        fedamb = new KlientAmbassador( this );
+        fedamb = new ObslugaAmbassador( this );
         rtiamb.connect( fedamb, CallbackModel.HLA_EVOKED );
 
         log( "Creating Federation..." );
@@ -85,12 +81,7 @@ public class KlientFederate {
                     (new File("foms/MSK_Fom.xml")).toURI().toURL(),
             };
             rtiamb.createFederationExecution( "MSKProjektFederation", modules );
-            log( "Created Federation from Klient" );
-
-//            File fom = new File( "MSK_Projekt.fed" );
-//            rtiamb.createFederationExecution( "MSKProjektFederation",
-//                    fom.toURI().toURL() );
-//            log( "Created Federation from Klient" );
+            log( "Created Federation from Obsluga" );
         }
         catch( FederationExecutionAlreadyExists exists )
         {
@@ -104,7 +95,7 @@ public class KlientFederate {
         }
 
         rtiamb.joinFederationExecution( federateName,
-                "KlientType",
+                "ObslugaType",
                 "MSKProjektFederation");
 
         log("Joined Federation as: " + federateName);
@@ -139,9 +130,20 @@ public class KlientFederate {
             if (fedamb.federateTime==0)
                 advanceTime( timeStep );
 
-            sendAddClientInteraction();
-            sendGetMoneyInteraction();
-
+            if(fedamb.externalEvents.size() > 0) {
+                fedamb.externalEvents.sort(new ObslugaExternalEvent.ExternalEventComparator());
+                for(ObslugaExternalEvent externalEvent : fedamb.externalEvents) {
+                    fedamb.federateTime = externalEvent.getTime();
+                    switch (externalEvent.getEventType()) {
+                        case NoMoney:
+                            sendObslStartInteraction();
+                            advanceTime( 50);
+                            sendObslStopInteraction();
+                            break;
+                    }
+                }
+                fedamb.externalEvents.clear();
+            }
             rtiamb.evokeMultipleCallbacks( 0.1, 0.2 );
             advanceTime( timeStep );
             log( "Time Advanced to " + fedamb.federateTime );
@@ -156,7 +158,7 @@ public class KlientFederate {
         try
         {
             rtiamb.destroyFederationExecution( "ExampleFederation" );
-            log( "Destroyed Federation from Klient" );
+            log( "Destroyed Federation from Obsluga" );
         }
         catch( FederationExecutionDoesNotExist dne )
         {
@@ -171,26 +173,26 @@ public class KlientFederate {
 
     //////////////////////////////////////Metody Pomocnicze//////////////////////////////////////////////
 
-    private void sendGetMoneyInteraction() throws RTIexception {
+    private void sendObslStartInteraction() throws RTIexception
+    {
         ParameterHandleValueMap parameters = rtiamb.getParameterHandleValueMapFactory().create(0);
         HLAfloat64Time time = timeFactory.makeTime( fedamb.federateTime+fedamb.federateLookahead );
 
-        Random random = new Random();
-        int quantityInt = random.nextInt(10000) + 1;
-        byte[] quantity = EncodingHelpers.encodeInt(quantityInt);
-        quantityHandle = rtiamb.getParameterHandle( getMoneyHandle, "Quantity" );
+        log("Obsluga Start Working / Bankomat Stop Working");
+        rtiamb.sendInteraction( StopWorkingHandle, parameters, generateTag(), time );
+    }
+
+    private void sendObslStopInteraction() throws RTIexception {
+        ParameterHandleValueMap parameters = rtiamb.getParameterHandleValueMapFactory().create(0);
+        HLAfloat64Time time = timeFactory.makeTime( fedamb.federateTime+fedamb.federateLookahead );
+
+        byte[] quantity = EncodingHelpers.encodeInt(50000);
+        quantityHandle = rtiamb.getParameterHandle( addMoneyHandle, "Quantity" );
 
         parameters.put(quantityHandle, quantity);
 
-        log("Sending GetMoney: " + quantityInt);
-        rtiamb.sendInteraction( getMoneyHandle, parameters, generateTag(), time );
-    }
-
-    private void sendAddClientInteraction() throws RTIexception {
-        ParameterHandleValueMap parameters = rtiamb.getParameterHandleValueMapFactory().create(0);
-        HLAfloat64Time time = timeFactory.makeTime( fedamb.federateTime+fedamb.federateLookahead );
-        log("Sending AddClient");
-        rtiamb.sendInteraction( addClientHandle, parameters, generateTag(), time );
+        log("Sending AddMoney: " + 50000);
+        rtiamb.sendInteraction( addMoneyHandle, parameters, generateTag(), time );
     }
 
     private void enableTimePolicy() throws Exception
@@ -215,13 +217,17 @@ public class KlientFederate {
     }
 
     private void publishAndSubscribe() throws RTIexception {
-        getMoneyHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.GetMoney" );
-        fedamb.getMoneyHandle = getMoneyHandle;
-        rtiamb.publishInteractionClass( getMoneyHandle );
+        StopWorkingHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.StopWorking" );
+        fedamb.StopWorkingHandle = StopWorkingHandle;
+        rtiamb.publishInteractionClass( StopWorkingHandle );
 
-        addClientHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.AddClient" );
-        fedamb.addClientHandle = addClientHandle;
-        rtiamb.publishInteractionClass( addClientHandle );
+        addMoneyHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.AddMoney" );
+        fedamb.addMoneyHandle = addMoneyHandle;
+        rtiamb.publishInteractionClass( addMoneyHandle );
+
+        NoMoneyHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.InformNoMoney");
+        fedamb.NoMoneyHandle = NoMoneyHandle;
+        rtiamb.subscribeInteractionClass(NoMoneyHandle);
     }
 
 
@@ -253,7 +259,7 @@ public class KlientFederate {
 
     public static void main( String[] args )
     {
-        String federateName = "KlientFederate";
+        String federateName = "ObslugaFederate";
         if( args.length != 0 )
         {
             federateName = args[0];
@@ -261,7 +267,7 @@ public class KlientFederate {
 
         try
         {
-            new KlientFederate().runFederate( federateName );
+            new ObslugaFederate().runFederate( federateName );
         }
         catch( Exception rtie )
         {

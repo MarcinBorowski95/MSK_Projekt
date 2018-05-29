@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/Klient/KlientFederate.java" line="185" />
+    <bookmark url="file://$PROJECT_DIR$/src/Klient/KlientFederate.java" line="184" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38de6158-1d13-42a4-ba97-769476046d99" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/foms/MSK_Fom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Obsluga/ObslugaAmbassador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Obsluga/ObslugaExternalEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Obsluga/ObslugaFederate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foms/Bankomat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/portico.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/portico.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/Bankomat/BankomatAmbassador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/Bankomat/BankomatAmbassador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/Bankomat/BankomatFederate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/Bankomat/BankomatFederate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/Klient/KlientAmbassador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/Klient/KlientAmbassador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/Klient/KlientFederate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/Klient/KlientFederate.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bankomat/BankomatAmbassador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bankomat/BankomatAmbassador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bankomat/BankomatFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bankomat/BankomatFederate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Klient/KlientAmbassador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Klient/KlientAmbassador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Klient/KlientFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Klient/KlientFederate.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -26,8 +31,8 @@
       <file leaf-file-name="BankomatFederate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bankomat/BankomatFederate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="306" column="64" selection-start-line="306" selection-start-column="64" selection-end-line="306" selection-end-column="64" />
+            <state relative-caret-position="-4257">
+              <caret line="33" column="49" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,14 +40,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BankomatAmbassador.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Bankomat/BankomatAmbassador.java">
+      <file leaf-file-name="ObslugaFederate.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Obsluga/ObslugaFederate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="93" column="31" lean-forward="true" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
+            <state relative-caret-position="374">
+              <caret line="139" column="40" lean-forward="true" selection-start-line="139" selection-start-column="40" selection-end-line="139" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MSK_Fom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/foms/MSK_Fom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="407">
+              <caret line="170" column="39" selection-start-line="170" selection-start-column="39" selection-end-line="170" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -50,8 +64,8 @@
       <file leaf-file-name="KlientFederate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Klient/KlientFederate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="180" column="70" selection-start-line="180" selection-start-column="70" selection-end-line="180" selection-end-column="70" />
+            <state relative-caret-position="105">
+              <caret line="181" lean-forward="true" selection-start-line="181" selection-end-line="181" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,11 +73,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KlientAmbassador.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Klient/KlientAmbassador.java">
+      <file leaf-file-name="ObslugaExternalEvent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Obsluga/ObslugaExternalEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-177">
-              <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+            <state>
+              <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObslugaAmbassador.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Obsluga/ObslugaAmbassador.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BankomatAmbassador.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Bankomat/BankomatAmbassador.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="139" column="5" lean-forward="true" selection-start-line="50" selection-start-column="4" selection-end-line="139" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,8 +112,8 @@
       <file leaf-file-name="BankomatExternalEvent.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bankomat/BankomatExternalEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+            <state relative-caret-position="442">
+              <caret line="48" column="5" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="48" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,13 +142,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/MSK_Projekt.fed" />
-        <option value="$PROJECT_DIR$/src/Klient/KlientAmbassador.java" />
         <option value="$PROJECT_DIR$/src/Bankomat/BankomatExternalEvent.java" />
         <option value="$PROJECT_DIR$/foms/Bankomat" />
         <option value="$PROJECT_DIR$/foms/MSK_Fom.xml" />
-        <option value="$PROJECT_DIR$/src/Klient/KlientFederate.java" />
-        <option value="$PROJECT_DIR$/src/Bankomat/BankomatFederate.java" />
         <option value="$PROJECT_DIR$/src/Bankomat/BankomatAmbassador.java" />
+        <option value="$PROJECT_DIR$/src/Klient/KlientAmbassador.java" />
+        <option value="$PROJECT_DIR$/src/Klient/KlientFederate.java" />
+        <option value="$PROJECT_DIR$/src/Obsluga/ObslugaExternalEvent.java" />
+        <option value="$PROJECT_DIR$/src/Obsluga/ObslugaAmbassador.java" />
+        <option value="$PROJECT_DIR$/src/Bankomat/BankomatFederate.java" />
+        <option value="$PROJECT_DIR$/src/Obsluga/ObslugaFederate.java" />
       </list>
     </option>
   </component>
@@ -167,6 +208,12 @@
             </path>
             <path>
               <item name="MSK_Projekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MSK_Projekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Obsluga" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MSK_Projekt" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -180,7 +227,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - Wojskowa Akademia Techniczna/STUDIA/SEM VIII/MSK/Projekt/Materiały/Czas w HLA/portico-producer-consumer-full" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -219,6 +266,17 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Klient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="ObslugaFederate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Obsluga.ObslugaFederate" />
+      <module name="MSK_Projekt" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Obsluga.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -267,10 +325,12 @@
     <list>
       <item itemvalue="Application.BankomatFederate" />
       <item itemvalue="Application.KlientFederate" />
+      <item itemvalue="Application.ObslugaFederate" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.KlientFederate" />
+        <item itemvalue="Application.ObslugaFederate" />
         <item itemvalue="Application.BankomatFederate" />
       </list>
     </recent_temporary>
@@ -287,12 +347,12 @@
       <updated>1527090976342</updated>
       <workItem from="1527090979153" duration="12018000" />
       <workItem from="1527176909109" duration="16845000" />
-      <workItem from="1527622900177" duration="3013000" />
+      <workItem from="1527622900177" duration="7503000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31876000" />
+    <option name="totallyTimeSpent" value="36366000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -305,7 +365,7 @@
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.32570806" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32570806" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Designer" order="6" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
@@ -421,13 +481,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/foms/MSK_Fom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2890">
-          <caret line="170" column="39" selection-start-line="170" selection-start-column="39" selection-end-line="170" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MSK_Projekt.fed">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -435,30 +488,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bankomat/BankomatExternalEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Klient/KlientAmbassador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-177">
-          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+        <state relative-caret-position="469">
+          <caret line="116" column="1" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="116" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bankomat/BankomatFederate.java">
+    <entry file="file://$PROJECT_DIR$/src/Bankomat/BankomatExternalEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="306" column="64" selection-start-line="306" selection-start-column="64" selection-end-line="306" selection-end-column="64" />
+        <state relative-caret-position="442">
+          <caret line="48" column="5" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="48" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -467,8 +510,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Klient/KlientFederate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="180" column="70" selection-start-line="180" selection-start-column="70" selection-end-line="180" selection-end-column="70" />
+        <state relative-caret-position="105">
+          <caret line="181" lean-forward="true" selection-start-line="181" selection-end-line="181" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -477,8 +520,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Bankomat/BankomatAmbassador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="93" column="31" lean-forward="true" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
+        <state relative-caret-position="348">
+          <caret line="139" column="5" lean-forward="true" selection-start-line="50" selection-start-column="4" selection-end-line="139" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Obsluga/ObslugaAmbassador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/foms/MSK_Fom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="170" column="39" selection-start-line="170" selection-start-column="39" selection-end-line="170" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bankomat/BankomatFederate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4257">
+          <caret line="33" column="49" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Obsluga/ObslugaExternalEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Obsluga/ObslugaFederate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="139" column="40" lean-forward="true" selection-start-line="139" selection-start-column="40" selection-end-line="139" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

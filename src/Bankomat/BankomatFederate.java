@@ -31,7 +31,7 @@ public class BankomatFederate {
 
     //Zmienne Bankomatu
     private final double timeStep           = 1.0;
-    private int stock                       = 100000;
+    private int stock                       = 10000;
     private int queue                       = 0;
     private Boolean working                 = true;
 
@@ -297,7 +297,6 @@ public class BankomatFederate {
         addQuantityHandle = rtiamb.getParameterHandle(this.addMoneyHandle, "Quantity");
         fedamb.addMoneyHandle = addMoneyHandle;
         rtiamb.subscribeInteractionClass( addMoneyHandle );
-
 
         getMoneyHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.GetMoney" );
         getQuantityHandle = rtiamb.getParameterHandle(this.getMoneyHandle, "Quantity");

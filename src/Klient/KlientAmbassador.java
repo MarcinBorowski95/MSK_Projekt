@@ -1,7 +1,5 @@
 package Klient;
 
-import Bankomat.BankomatExternalEvent;
-import Bankomat.BankomatFederate;
 import hla.rti1516e.*;
 import hla.rti1516e.exceptions.FederateInternalError;
 import hla.rti1516e.time.HLAfloat64Time;
@@ -61,7 +59,7 @@ public class KlientAmbassador extends NullFederateAmbassador {
     public void announceSynchronizationPoint( String label, byte[] tag )
     {
         log( "Synchronization point announced: " + label );
-        if( label.equals(BankomatFederate.READY_TO_RUN) )
+        if( label.equals(KlientFederate.READY_TO_RUN) )
             this.isAnnounced = true;
     }
 
@@ -69,7 +67,7 @@ public class KlientAmbassador extends NullFederateAmbassador {
     public void federationSynchronized( String label, FederateHandleSet failed )
     {
         log( "Federation Synchronized: " + label );
-        if( label.equals(BankomatFederate.READY_TO_RUN) )
+        if( label.equals(KlientFederate.READY_TO_RUN) )
             this.isReadyToRun = true;
     }
 
