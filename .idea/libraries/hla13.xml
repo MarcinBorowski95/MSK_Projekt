@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="hla13">
+    <CLASSES>
+      <root url="jar://C:/Program Files (x86)/Portico/portico-2016.05.28/lib/portico.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://C:/Program Files (x86)/Portico/portico-2016.05.28/documentation/javadoc/hla13" />
+      <root url="file://C:/Program Files (x86)/Portico/portico-2016.05.28/documentation/javadoc/hla13-java1" />
+      <root url="file://C:/Program Files (x86)/Portico/portico-2016.05.28/documentation/javadoc/hlaunit" />
+      <root url="file://C:/Program Files (x86)/Portico/portico-2016.05.28/documentation/javadoc/ieee1516" />
+      <root url="file://C:/Program Files (x86)/Portico/portico-2016.05.28/documentation/javadoc/ieee1516e" />
+      <root url="file://C:/Program Files (x86)/Portico/portico-2016.05.28/documentation/javadoc/portico" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://C:/Program Files (x86)/Portico/portico-2016.05.28/examples/java/hla13/src" />
+      <root url="file://C:/Program Files (x86)/Portico/portico-2016.05.28/examples/java/ieee1516e/src" />
+    </SOURCES>
+  </library>
+</component>
