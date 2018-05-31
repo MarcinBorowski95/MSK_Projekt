@@ -32,7 +32,7 @@ public class BankomatFederate {
     //Zmienne Bankomatu
     private final double timeStep           = 1.0;
     private int stock                       = 10000;
-    private int queue                       = 0;
+    public int queue                       = 0;
     private Boolean working                 = true;
 
     //Zmienne Handle
@@ -46,6 +46,7 @@ public class BankomatFederate {
     protected InteractionClassHandle clientLeaveHandle;
     protected InteractionClassHandle stopWorkingHandle;
     protected InteractionClassHandle informNoMoneyHandle;
+    protected InteractionClassHandle zniecierpliwienieHandle;
     protected ParameterHandle addQuantityHandle;
     protected ParameterHandle getQuantityHandle;
 
@@ -318,6 +319,10 @@ public class BankomatFederate {
         informNoMoneyHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.InformNoMoney");
         fedamb.informNoMoneyHandle = informNoMoneyHandle;
         rtiamb.publishInteractionClass( informNoMoneyHandle );
+
+        zniecierpliwienieHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.Zniecierpliwienie" );
+        fedamb.zniecierpliwienie = zniecierpliwienieHandle;
+        rtiamb.subscribeInteractionClass( zniecierpliwienieHandle );
     }
 
     private ObjectInstanceHandle registerObject() throws RTIexception

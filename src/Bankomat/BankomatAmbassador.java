@@ -34,6 +34,7 @@ public class BankomatAmbassador extends NullFederateAmbassador {
     public InteractionClassHandle clientLeaveHandle;
     public InteractionClassHandle stopWorkingHandle;
     public InteractionClassHandle informNoMoneyHandle;
+    public InteractionClassHandle zniecierpliwienie;
 
     protected ArrayList<BankomatExternalEvent> externalEvents = new ArrayList<>();
     //----------------------------------------------------------

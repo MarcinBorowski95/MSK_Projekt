@@ -29,6 +29,7 @@ public class KlientAmbassador extends NullFederateAmbassador {
 
     public InteractionClassHandle getMoneyHandle;
     public InteractionClassHandle addClientHandle;
+    public InteractionClassHandle zniecierpliwienie;
 
     //----------------------------------------------------------
 
