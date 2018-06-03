@@ -155,8 +155,34 @@ public class KlientAmbassador extends NullFederateAmbassador {
         if(interactionClass.equals(federate.zniecierpliwienie)){
             builder.append(" (Liczba Klientow)" );
             int que = EncodingHelpers.decodeInt(theParameters.get(federate.liczbaKlientowHandle));
-            log("Liczba Klientow: " +que);
+            log(" Liczba Klientow: " +que);
             externalEvents.add(new KlientExternalEvent(que,KlientExternalEvent.EventType.ZNIECIERPLIWIENIE,time));
         }
+
+        // print the tag
+        builder.append( ", tag=" + new String(tag) );
+
+        // print the time
+        if( time != null )
+        {
+            builder.append( ", time=" + ((HLAfloat64Time)time).getValue() );
+        }
+
+        // print the parameer information
+        builder.append( ", parameterCount=" + theParameters.size() );
+        builder.append( "\n" );
+        for( ParameterHandle parameter : theParameters.keySet() )
+        {
+            // print the parameter handle
+            builder.append( "\tparamHandle=" );
+            builder.append( parameter );
+            // print the parameter value
+            builder.append( ", paramValue=" );
+            builder.append( theParameters.get(parameter).length );
+            builder.append( " bytes" );
+            builder.append( "\n" );
+        }
+
+        log( builder.toString() );
     }
 }

@@ -48,7 +48,6 @@ public class KlientFederate {
     protected ParameterHandle quantityHandle;
     protected ParameterHandle liczbaKlientowHandle;
 
-    private Context context;
 
 
     private void log(String message) {
@@ -142,8 +141,9 @@ public class KlientFederate {
                         fedamb.federateTime = externalEvent.getTime();
                         switch (externalEvent.getEventType()) {
                             case ZNIECIERPLIWIENIE:
-                                this.checkIloscOsob(externalEvent.getQue());
-                                advanceTime(15);
+                                checkIloscOsob(externalEvent.getQue());
+                                //advanceTime(timeStep);
+                                log("HALOHALOHALOHALOHALOHALOHALOHALOHALOHALOHALOHALO" +externalEvent.getQue());
                                 break;
                         }
                     }
@@ -153,7 +153,7 @@ public class KlientFederate {
                 }
 
             }
-            sendGetMoneyInteraction();
+           // sendGetMoneyInteraction();
 
             rtiamb.evokeMultipleCallbacks(0.1, 0.2);
             advanceTime(timeStep);
@@ -193,7 +193,7 @@ public class KlientFederate {
 
         parameters.put(quantityHandle, quantity);
 
-        log("Sending GetMoney: " + quantityInt);
+        log("Sending GetMoney: " + quantityInt + " At time: " + time);
         rtiamb.sendInteraction(getMoneyHandle, parameters, generateTag(), time);
     }
 
