@@ -35,7 +35,9 @@
       (class ClientLeave reliable timestamp TestSpace)
       (class StopWorking reliable timestamp TestSpace)
       (class InformNoMoney reliable timestamp TestSpace)
-     (class Zniecierpliwienie reliable timestamp TestSpace)
+     (class Zniecierpliwienie reliable timestamp TestSpace
+     (parameter kolejka)
+     )
     )
   )
 )

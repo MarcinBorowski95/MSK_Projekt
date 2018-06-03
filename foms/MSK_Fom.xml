@@ -175,6 +175,18 @@
                     order="Receive"
                     semantics="NA">
             </interactionClass>
+            <interactionClass
+                    name="Zniecierpliwienie"
+                    sharing="PublishSubscribe"
+                    dimensions="NA"
+                    transportation="HLAreliable"
+                    order="Receive"
+                    semantics="NA">
+                <parameter name="kolejka" dataType="HLAfixedArray" updateType="Conditional"
+                           updateCondition="NA" ownership="NoTransfer" sharing="PublishSubscribe"
+                           dimensions="NA" transportation="HLAreliable" order="TimeStamp"
+                           semantics="NA" />
+            </interactionClass>
         </interactionClass>
     </interactions>
 </objectModel>

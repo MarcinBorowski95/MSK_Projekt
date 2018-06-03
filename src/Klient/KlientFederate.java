@@ -1,6 +1,7 @@
 package Klient;
 
 import Bankomat.BankomatFederate;
+import Obsluga.ObslugaExternalEvent;
 import hla.rti.jlc.EncodingHelpers;
 import hla.rti1516e.*;
 import hla.rti1516e.encoding.ByteWrapper;
@@ -45,6 +46,7 @@ public class KlientFederate {
     protected InteractionClassHandle addClientHandle;
     protected InteractionClassHandle zniecierpliwienie;
     protected ParameterHandle quantityHandle;
+    protected ParameterHandle liczbaKlientowHandle;
 
     private Context context;
 
@@ -133,24 +135,25 @@ public class KlientFederate {
 
             sendAddClientInteraction();
 
-
-            if (context instanceof BankomatFederate) {
-                this.queue = ((BankomatFederate) context).queue;
-            }
-
-            if (queue > 5){
-                log("QUEUE IS MORE THAN 55555555555555555555555555555555555555555555555555555555555555555555555555555555555555");
-                try{
-                    Random random = new Random();
-                    if(random.nextBoolean()){
-                        sendZniecierpliwienieInteraction();
+            if(fedamb.externalEvents.size() > 0) {
+                fedamb.externalEvents.sort(new KlientExternalEvent.ExternalEventComparator());
+                try {
+                    for (KlientExternalEvent externalEvent : fedamb.externalEvents) {
+                        fedamb.federateTime = externalEvent.getTime();
+                        switch (externalEvent.getEventType()) {
+                            case ZNIECIERPLIWIENIE:
+                                this.checkIloscOsob(externalEvent.getQue());
+                                advanceTime(15);
+                                break;
+                        }
                     }
-                }catch (Exception e){
-                    e.printStackTrace();
+                    fedamb.externalEvents.clear();
+                } catch (java.util.ConcurrentModificationException exception){
+                    log(String.valueOf(exception));
                 }
-            }
 
-                sendGetMoneyInteraction();
+            }
+            sendGetMoneyInteraction();
 
             rtiamb.evokeMultipleCallbacks(0.1, 0.2);
             advanceTime(timeStep);
@@ -174,7 +177,11 @@ public class KlientFederate {
     }
 
     //////////////////////////////////////Metody Pomocnicze//////////////////////////////////////////////
-
+//fixme change name of method
+    public void checkIloscOsob(int que){
+        this.queue = que;
+        log("Current que " + queue + " at time: " + fedamb.federateTime);
+    }
     private void sendGetMoneyInteraction() throws RTIexception {
         ParameterHandleValueMap parameters = rtiamb.getParameterHandleValueMapFactory().create(0);
         HLAfloat64Time time = timeFactory.makeTime(fedamb.federateTime + fedamb.federateLookahead);
@@ -199,12 +206,7 @@ public class KlientFederate {
 
     // testing if instanceof is working
     //TODO make ZNIECIERPLIWIENIE
-    private void sendZniecierpliwienieInteraction() throws RTIexception {
-        ParameterHandleValueMap parameters = rtiamb.getParameterHandleValueMapFactory().create(0);
-        HLAfloat64Time time = timeFactory.makeTime(fedamb.federateTime + fedamb.federateLookahead);
-        log("Sending Zniecierpliwienie");
-        rtiamb.sendInteraction(zniecierpliwienie, parameters, generateTag(), time);
-    }
+
 
     private void enableTimePolicy() throws Exception {
         HLAfloat64Interval lookahead = timeFactory.makeInterval(fedamb.federateLookahead);
@@ -234,8 +236,9 @@ public class KlientFederate {
         rtiamb.publishInteractionClass(addClientHandle);
 
         zniecierpliwienie = rtiamb.getInteractionClassHandle("InteractionRoot.Zniecierpliwienie");
+        liczbaKlientowHandle = rtiamb.getParameterHandle(this.zniecierpliwienie, "kolejka");
         fedamb.zniecierpliwienie = zniecierpliwienie;
-        rtiamb.publishInteractionClass(zniecierpliwienie);
+        rtiamb.subscribeInteractionClass(zniecierpliwienie);
     }
 
 

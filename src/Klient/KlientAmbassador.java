@@ -1,5 +1,6 @@
 package Klient;
 
+import hla.rti.jlc.EncodingHelpers;
 import hla.rti1516e.*;
 import hla.rti1516e.exceptions.FederateInternalError;
 import hla.rti1516e.time.HLAfloat64Time;
@@ -30,6 +31,8 @@ public class KlientAmbassador extends NullFederateAmbassador {
     public InteractionClassHandle getMoneyHandle;
     public InteractionClassHandle addClientHandle;
     public InteractionClassHandle zniecierpliwienie;
+
+    protected ArrayList<KlientExternalEvent> externalEvents = new ArrayList<>();
 
     //----------------------------------------------------------
 
@@ -114,5 +117,46 @@ public class KlientAmbassador extends NullFederateAmbassador {
             throws FederateInternalError
     {
         log( "Object Removed: handle=" + theObject );
+    }
+
+    @Override
+    public void receiveInteraction( InteractionClassHandle interactionClass,
+                                    ParameterHandleValueMap theParameters,
+                                    byte[] tag,
+                                    OrderType sentOrdering,
+                                    TransportationTypeHandle theTransport,
+                                    SupplementalReceiveInfo receiveInfo )
+            throws FederateInternalError
+    {
+        this.receiveInteraction( interactionClass,
+                theParameters,
+                tag,
+                sentOrdering,
+                theTransport,
+                null,
+                sentOrdering,
+                receiveInfo );
+    }
+
+    @Override
+    public void receiveInteraction( InteractionClassHandle interactionClass,
+                                    ParameterHandleValueMap theParameters,
+                                    byte[] tag,
+                                    OrderType sentOrdering,
+                                    TransportationTypeHandle theTransport,
+                                    LogicalTime time,
+                                    OrderType receivedOrdering,
+                                    SupplementalReceiveInfo receiveInfo )
+            throws FederateInternalError {
+        StringBuilder builder = new StringBuilder("Interaction Received:");
+
+        // print the handle and handle interaction
+        builder.append(" handle=" + interactionClass);
+        if(interactionClass.equals(federate.zniecierpliwienie)){
+            builder.append(" (Liczba Klientow)" );
+            int que = EncodingHelpers.decodeInt(theParameters.get(federate.liczbaKlientowHandle));
+            log("Liczba Klientow: " +que);
+            externalEvents.add(new KlientExternalEvent(que,KlientExternalEvent.EventType.ZNIECIERPLIWIENIE,time));
+        }
     }
 }
