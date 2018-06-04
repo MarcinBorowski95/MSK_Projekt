@@ -32,7 +32,7 @@ public class KlientFederate {
     private HLAfloat64TimeFactory timeFactory; // set when we join
     protected EncoderFactory encoderFactory;     // set when we join
 
-    //Zmienne Bankomatu
+    //Zmienne
     private final double timeStep           = 10.0;
     private int nrKlient = 0;
 
