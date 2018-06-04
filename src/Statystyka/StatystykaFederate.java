@@ -205,8 +205,8 @@ public class StatystykaFederate {
         rtiamb.subscribeInteractionClass(koniecSymulacjiHandle);
 
         wyslijWynikiHandle = rtiamb.getInteractionClassHandle("InteractionRoot.WyslijWyniki");
-        /*liczbaObsluzonychKlientowHandle = rtiamb.getParameterHandle(wyslijWynikiHandle,"liczbaObsluzonychKlientow");
-        liczbaZniecierpliwionychHandle = rtiamb.getParameterHandle(wyslijWynikiHandle,"liczbaZniecierpliwionychKlientow");
+        liczbaObsluzonychKlientowHandle = rtiamb.getParameterHandle(wyslijWynikiHandle,"liczbaObsluzonychKlientow");
+        /*liczbaZniecierpliwionychHandle = rtiamb.getParameterHandle(wyslijWynikiHandle,"liczbaZniecierpliwionychKlientow");
         iloscWplaconejGotowkiHandle = rtiamb.getParameterHandle(wyslijWynikiHandle,"iloscWplaconejGotowki");
         iloscWyplaconejGotowki = rtiamb.getParameterHandle(wyslijWynikiHandle,"iloscWyplaconejGotowki");
         ileRazyObslugaZawitala = rtiamb.getParameterHandle(wyslijWynikiHandle,"ileRazyObslugaZawitala");*/
