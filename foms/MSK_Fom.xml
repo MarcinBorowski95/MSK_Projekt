@@ -175,6 +175,18 @@
                     order="Receive"
                     semantics="NA">
             </interactionClass>
+            <interactionClass
+                    name="WyslijWyniki"
+                    sharing="PublishSubscribe"
+                    dimensions="NA"
+                    transportation="HLAreliable"
+                    order="Receive"
+                    semantics="NA">
+                <parameter name="liczbaObsluzonychKlientow" dataType="HLAfixedArray" updateType="Conditional"
+                           updateCondition="NA" ownership="NoTransfer" sharing="PublishSubscribe"
+                           dimensions="NA" transportation="HLAreliable" order="TimeStamp"
+                           semantics="NA" />
+            </interactionClass>
         </interactionClass>
     </interactions>
 </objectModel>
