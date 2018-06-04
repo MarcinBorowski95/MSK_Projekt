@@ -43,6 +43,7 @@ public class StatystykaFederate {
     protected InteractionClassHandle wyslijWynikiHandle;
     protected ParameterHandle liczbaZniecierpliwionychHandle;
     protected ParameterHandle liczbaObsluzonychKlientowHandle;
+    protected ParameterHandle liczbaKlientowHandle;
     //fixme ilosc czy liczba gotowki?
     protected ParameterHandle iloscWyplaconejGotowki;
     protected ParameterHandle iloscWplaconejGotowkiHandle;
@@ -138,6 +139,7 @@ public class StatystykaFederate {
         publishAndSubscribe();
         log( "Published and Subscribed" );
 
+        this.statystykaGui = new StatystykaGui(this);
 
         //////////////////////////////////////MAIN SIM LOOP//////////////////////////////////////////////////////
         while (fedamb.running) {
@@ -206,6 +208,7 @@ public class StatystykaFederate {
 
         wyslijWynikiHandle = rtiamb.getInteractionClassHandle("InteractionRoot.WyslijWyniki");
         liczbaObsluzonychKlientowHandle = rtiamb.getParameterHandle(wyslijWynikiHandle,"liczbaObsluzonychKlientow");
+        liczbaKlientowHandle = rtiamb.getParameterHandle(wyslijWynikiHandle,"liczbaKlientow");
         /*liczbaZniecierpliwionychHandle = rtiamb.getParameterHandle(wyslijWynikiHandle,"liczbaZniecierpliwionychKlientow");
         iloscWplaconejGotowkiHandle = rtiamb.getParameterHandle(wyslijWynikiHandle,"iloscWplaconejGotowki");
         iloscWyplaconejGotowki = rtiamb.getParameterHandle(wyslijWynikiHandle,"iloscWyplaconejGotowki");

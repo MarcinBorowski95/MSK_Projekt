@@ -186,6 +186,10 @@
                            updateCondition="NA" ownership="NoTransfer" sharing="PublishSubscribe"
                            dimensions="NA" transportation="HLAreliable" order="TimeStamp"
                            semantics="NA" />
+                <parameter name="liczbaKlientow" dataType="HLAfixedArray" updateType="Conditional"
+                           updateCondition="NA" ownership="NoTransfer" sharing="PublishSubscribe"
+                           dimensions="NA" transportation="HLAreliable" order="TimeStamp"
+                           semantics="NA" />
             </interactionClass>
         </interactionClass>
     </interactions>

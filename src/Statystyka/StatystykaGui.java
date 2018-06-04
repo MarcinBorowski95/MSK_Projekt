@@ -11,11 +11,11 @@ public class StatystykaGui {
     private JFrame frame;
 
     private JLabel liczbaKlientowLabel;
-    private JLabel liczbaZniecierpliwionychLabel;
+    private JLabel liczbaObsluzonychLabel;
     private JLabel przepustowoscLabel;
 
     private JLabel liczbaKlientowText;
-    private JLabel liczbaZniecierpliwionychText;
+    private JLabel liczbaObsluzonychText;
     private JLabel przepustowoscText;
 
     public StatystykaGui() {
@@ -30,7 +30,7 @@ public class StatystykaGui {
 
     public void setStats(int liczbaKlientow, int liczbaObsluzonych){
         liczbaKlientowText.setText(String.valueOf(liczbaKlientow));
-        liczbaZniecierpliwionychText.setText(String.valueOf(liczbaObsluzonych));
+        liczbaObsluzonychText.setText(String.valueOf(liczbaObsluzonych));
         przepustowoscText.setText(String.valueOf((float)((float)liczbaObsluzonych/liczbaKlientow)*100) + "%");
 
         //statystykaFederate.endSim();
@@ -47,9 +47,9 @@ public class StatystykaGui {
         liczbaKlientowLabel.setBounds(25,50,200,20);
         liczbaKlientowLabel.setText("Liczba klientów");
 
-        liczbaZniecierpliwionychLabel = new JLabel();
-        liczbaZniecierpliwionychLabel.setBounds(25,100,200,20);
-        liczbaZniecierpliwionychLabel.setText("Liczba obsłużonych");
+        liczbaObsluzonychLabel = new JLabel();
+        liczbaObsluzonychLabel.setBounds(25,100,200,20);
+        liczbaObsluzonychLabel.setText("Liczba obsłużonych");
 
         przepustowoscLabel = new JLabel();
         przepustowoscLabel.setBounds(25,150,200,20);
@@ -58,18 +58,18 @@ public class StatystykaGui {
 
         liczbaKlientowText = new JLabel();
         liczbaKlientowText.setBounds(200,50,200,20);
-        liczbaZniecierpliwionychText = new JLabel();
-        liczbaZniecierpliwionychText.setBounds(200,100,200,20);
+        liczbaObsluzonychText = new JLabel();
+        liczbaObsluzonychText.setBounds(200,100,200,20);
         przepustowoscText = new JLabel();
         przepustowoscText.setBounds(200,150,200,20);
 
 
         frame.add(liczbaKlientowLabel);
-        frame.add(liczbaZniecierpliwionychLabel);
+        frame.add(liczbaObsluzonychLabel);
         frame.add(przepustowoscLabel);
 
         frame.add(liczbaKlientowText);
-        frame.add(liczbaZniecierpliwionychText);
+        frame.add(liczbaObsluzonychText);
         frame.add(przepustowoscText);
 
 

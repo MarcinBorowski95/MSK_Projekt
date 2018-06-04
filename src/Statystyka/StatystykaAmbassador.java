@@ -196,20 +196,22 @@ public class StatystykaAmbassador extends NullFederateAmbassador {
         }
         if ( interactionClass.equals(federate.wyslijWynikiHandle))
         {
-            int liczbaKlientow = EncodingHelpers.decodeInt(theParameters.get(federate.liczbaObsluzonychKlientowHandle));
-            int liczbaZniecierpliwionych = EncodingHelpers.decodeInt(theParameters.get(federate.liczbaZniecierpliwionychHandle));
+            int liczbaKlientow = EncodingHelpers.decodeInt(theParameters.get(federate.liczbaKlientowHandle));
+            int liczbaObsluzonychKlientow = EncodingHelpers.decodeInt(theParameters.get(federate.liczbaObsluzonychKlientowHandle));
+            /*int liczbaZniecierpliwionych = EncodingHelpers.decodeInt(theParameters.get(federate.liczbaZniecierpliwionychHandle));
             int iloscWyplaconejGotowki = EncodingHelpers.decodeInt(theParameters.get(federate.iloscWyplaconejGotowki));
             int iloscWplaconejGotowki = EncodingHelpers.decodeInt(theParameters.get(federate.iloscWplaconejGotowkiHandle));
-            int ileRazyObsluga = EncodingHelpers.decodeInt(theParameters.get(federate.ileRazyObslugaZawitala));
+            int ileRazyObsluga = EncodingHelpers.decodeInt(theParameters.get(federate.ileRazyObslugaZawitala));*/
 
             //TODO stats?
-            federate.statystykaGui.setStats(liczbaKlientow, liczbaZniecierpliwionych);
+            federate.statystykaGui.setStats(liczbaKlientow, liczbaObsluzonychKlientow);
 
             System.out.println("Klienci: " + liczbaKlientow);
-            System.out.println("Zniecierpliwieni Klienci: " + liczbaZniecierpliwionych);
+            System.out.println(" Obsluzeni klienci: " + liczbaObsluzonychKlientow);
+           /* System.out.println("Zniecierpliwieni Klienci: " + liczbaZniecierpliwionych);
             System.out.println("Wplacona gotówka: " + iloscWplaconejGotowki);
             System.out.println("Wypłacona gotówka: " + iloscWyplaconejGotowki);
-            System.out.println("Obsluga: " + ileRazyObsluga);
+            System.out.println("Obsluga: " + ileRazyObsluga);*/
 
         }
 
