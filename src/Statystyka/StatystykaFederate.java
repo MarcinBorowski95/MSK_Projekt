@@ -4,11 +4,9 @@ import hla.rti.jlc.EncodingHelpers;
 import hla.rti1516e.*;
 import hla.rti1516e.encoding.ByteWrapper;
 import hla.rti1516e.encoding.EncoderFactory;
+import hla.rti1516e.encoding.HLAfloat32BE;
 import hla.rti1516e.encoding.HLAinteger16BE;
-import hla.rti1516e.exceptions.FederatesCurrentlyJoined;
-import hla.rti1516e.exceptions.FederationExecutionAlreadyExists;
-import hla.rti1516e.exceptions.FederationExecutionDoesNotExist;
-import hla.rti1516e.exceptions.RTIexception;
+import hla.rti1516e.exceptions.*;
 import hla.rti1516e.time.HLAfloat64Interval;
 import hla.rti1516e.time.HLAfloat64Time;
 import hla.rti1516e.time.HLAfloat64TimeFactory;
@@ -41,6 +39,7 @@ public class StatystykaFederate {
     //Zmienne Handle
     protected InteractionClassHandle koniecSymulacjiHandle;
     protected InteractionClassHandle wyslijWynikiHandle;
+    protected InteractionClassHandle wyslijStatystykeHandle;
     protected ParameterHandle liczbaZniecierpliwionychHandle;
     protected ParameterHandle liczbaObsluzonychKlientowHandle;
     protected ParameterHandle liczbaKlientowHandle;
@@ -48,6 +47,7 @@ public class StatystykaFederate {
     protected ParameterHandle iloscWyplaconejGotowki;
     protected ParameterHandle iloscWplaconejGotowkiHandle;
     protected ParameterHandle ileRazyObslugaZawitala;
+    protected ParameterHandle przepustowosc;
 
 
 
@@ -147,9 +147,10 @@ public class StatystykaFederate {
             if (fedamb.federateTime==0)
                 advanceTime( timeStep );
 
-            /*sendAddClientInteraction();
+            /*sendPrzepustowoscInteraction();
             sendGetMoneyInteraction();
 */
+            sendPrzepustowoscInteraction();
             rtiamb.evokeMultipleCallbacks( 0.1, 0.2 );
             advanceTime( timeStep );
             log( "Time Advanced to " + fedamb.federateTime );
@@ -175,6 +176,20 @@ public class StatystykaFederate {
             log( "Didn't destroy federation, federates still joined" );
         }
 
+    }
+
+    private void sendPrzepustowoscInteraction() throws RTIexception {
+        ParameterHandleValueMap parameters = rtiamb.getParameterHandleValueMapFactory().create(0);
+        HLAfloat64Time time = timeFactory.makeTime( fedamb.federateTime+fedamb.federateLookahead );
+
+
+        HLAfloat32BE przepustowoscFloat = encoderFactory.createHLAfloat32BE(statystykaGui.getPrzepustowosc());
+
+
+        parameters.put(przepustowosc, przepustowoscFloat.toByteArray());
+
+        log("Sending Przepustowosc: " +statystykaGui.getPrzepustowosc());
+        rtiamb.sendInteraction( wyslijStatystykeHandle, parameters, generateTag(), time );
     }
 
     //////////////////////////////////////Metody Pomocnicze//////////////////////////////////////////////
@@ -214,6 +229,10 @@ public class StatystykaFederate {
         iloscWyplaconejGotowki = rtiamb.getParameterHandle(wyslijWynikiHandle,"iloscWyplaconejGotowki");
         ileRazyObslugaZawitala = rtiamb.getParameterHandle(wyslijWynikiHandle,"ileRazyObslugaZawitala");*/
         rtiamb.subscribeInteractionClass(wyslijWynikiHandle);
+
+        wyslijStatystykeHandle = rtiamb.getInteractionClassHandle("InteractionRoot.WyslijStatystyke");
+        przepustowosc = rtiamb.getParameterHandle(wyslijStatystykeHandle,"Przepustowosc");
+        rtiamb.publishInteractionClass(wyslijStatystykeHandle);
     }
 
 

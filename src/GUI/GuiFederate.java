@@ -43,7 +43,11 @@ public class GuiFederate {
     protected ParameterHandle iloscWyplaconejGotowki;
     protected ParameterHandle iloscWplaconejGotowkiHandle;
     protected ParameterHandle ileRazyObslugaZawitala;
+    protected ParameterHandle przepustowosc;
 
+    protected InteractionClassHandle addMoneyHandle;
+    protected InteractionClassHandle StopWorkingHandle;
+    protected InteractionClassHandle wyslijStatystyke;
 
 
     private void log( String message )
@@ -209,6 +213,20 @@ public class GuiFederate {
         iloscWyplaconejGotowki = rtiamb.getParameterHandle(wyslijWynikiHandle,"iloscWyplaconejGotowki");
         ileRazyObslugaZawitala = rtiamb.getParameterHandle(wyslijWynikiHandle,"ileRazyObslugaZawitala");*/
         rtiamb.subscribeInteractionClass(wyslijWynikiHandle);
+
+        StopWorkingHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.StopWorking" );
+        fedamb.StopWorkingHandle = StopWorkingHandle;
+        rtiamb.subscribeInteractionClass( StopWorkingHandle );
+
+        addMoneyHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.AddMoney" );
+        fedamb.addMoneyHandle = addMoneyHandle;
+        rtiamb.subscribeInteractionClass( addMoneyHandle );
+
+        wyslijStatystyke = rtiamb.getInteractionClassHandle( "InteractionRoot.WyslijStatystyke" );
+        przepustowosc = rtiamb.getParameterHandle(wyslijStatystyke,"Przepustowosc");
+        rtiamb.subscribeInteractionClass( wyslijStatystyke );
+
+
     }
 
 

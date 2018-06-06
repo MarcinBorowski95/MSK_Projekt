@@ -15,10 +15,14 @@ public class GUI {
     private JLabel liczbaKlientowLabel;
     private JLabel liczbaObsluzonychLabel;
     private JLabel przepustowoscLabel;
+    private JLabel bankomatStanLabel;
+    private JLabel obslugaStanLabel;
 
     private JLabel liczbaKlientowText;
     private JLabel liczbaObsluzonychText;
     private JLabel przepustowoscText;
+    private JLabel bankomatStanText;
+    private JLabel obslugaStanText;
 
     public GUI() {
         init();
@@ -33,16 +37,27 @@ public class GUI {
     public void setStats(int liczbaKlientow, int liczbaObsluzonych){
         liczbaKlientowText.setText(String.valueOf(liczbaKlientow));
         liczbaObsluzonychText.setText(String.valueOf(liczbaObsluzonych));
-        przepustowoscText.setText(String.valueOf((float)((float)liczbaObsluzonych/liczbaKlientow)*100) + "%");
+
 
         //statystykaFederate.endSim();
     }
+
+    public void setStan(boolean bankomatWorking,boolean obsluga){
+        bankomatStanText.setText(String.valueOf(bankomatWorking));
+        obslugaStanText.setText(String.valueOf(obsluga));
+    }
+
+    public void setPrzepustowosc(float przepustowosc){
+        przepustowoscText.setText(String.valueOf(przepustowosc) + "%");
+    }
+
+
 
     private void init() {
         frame = new JFrame();
         frame.getContentPane().setLayout(null);
         frame.setResizable(false);
-        frame.setSize(300, 300);
+        frame.setSize(500, 600);
         frame.setTitle("GUI");
 
         liczbaKlientowLabel = new JLabel();
@@ -57,6 +72,14 @@ public class GUI {
         przepustowoscLabel.setBounds(25,150,200,20);
         przepustowoscLabel.setText("Przepustowość");
 
+        bankomatStanLabel = new JLabel();
+        bankomatStanLabel.setBounds(25,200,200,20);
+        bankomatStanLabel.setText("Stan Bankomatu");
+
+        obslugaStanLabel = new JLabel();
+        obslugaStanLabel.setBounds(25,250,200,20);
+        obslugaStanLabel.setText("Stan Obslugi");
+
 
         liczbaKlientowText = new JLabel();
         liczbaKlientowText.setBounds(200,50,200,20);
@@ -64,15 +87,26 @@ public class GUI {
         liczbaObsluzonychText.setBounds(200,100,200,20);
         przepustowoscText = new JLabel();
         przepustowoscText.setBounds(200,150,200,20);
+        bankomatStanText = new JLabel();
+        bankomatStanText.setBounds(200,200,200,20);
+        obslugaStanText = new JLabel();
+        obslugaStanText.setBounds(200,250,200,20);
+
+        bankomatStanText.setText(String.valueOf(true));
+        obslugaStanText.setText(String.valueOf(false));
 
 
         frame.add(liczbaKlientowLabel);
         frame.add(liczbaObsluzonychLabel);
         frame.add(przepustowoscLabel);
+        frame.add(bankomatStanLabel);
+        frame.add(obslugaStanLabel);
 
         frame.add(liczbaKlientowText);
         frame.add(liczbaObsluzonychText);
         frame.add(przepustowoscText);
+        frame.add(bankomatStanText);
+        frame.add(obslugaStanText);
 
 
         frame.setVisible(true);

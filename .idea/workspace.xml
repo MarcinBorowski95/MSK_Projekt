@@ -6,6 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="38de6158-1d13-42a4-ba97-769476046d99" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foms/MSK_Fom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/foms/MSK_Fom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/GUI/GUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/GUI/GUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/GUI/GUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/GUI/GUI$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/GUI/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/GUI/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/GUI/GuiAmbassador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/GUI/GuiAmbassador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/GUI/GuiFederate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/GUI/GuiFederate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/Statystyka/StatystykaFederate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/Statystyka/StatystykaFederate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/Statystyka/StatystykaGui$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/Statystyka/StatystykaGui$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/Statystyka/StatystykaGui$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/Statystyka/StatystykaGui$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/Statystyka/StatystykaGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/Statystyka/StatystykaGui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/GuiAmbassador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GuiAmbassador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/GuiFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GuiFederate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Statystyka/StatystykaFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Statystyka/StatystykaFederate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Statystyka/StatystykaGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Statystyka/StatystykaGui.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,29 +36,36 @@
     </SUITE>
   </component>
   <component name="DockManager">
-    <window id="1">
+    <window id="2">
       <content type="file-editors">
         <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="StatystykaFederate.java" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/Statystyka/StatystykaFederate.java">
+          <leaf>
+            <file leaf-file-name="BankomatFederate.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/Bankomat/BankomatFederate.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="305">
-                    <caret line="112" selection-start-line="112" selection-end-line="112" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                    </folding>
+                  <state relative-caret-position="267">
+                    <caret line="309" column="8" selection-start-line="309" selection-start-column="8" selection-end-line="309" selection-end-column="8" />
                   </state>
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="StatystykaGui.java" pinned="false" current-in-tab="false">
+          </leaf>
+        </state>
+      </content>
+    </window>
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+            <file leaf-file-name="StatystykaGui.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/Statystyka/StatystykaGui.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="490">
-                    <caret line="84" column="17" lean-forward="true" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
+                  <state relative-caret-position="356">
+                    <caret line="38" column="51" lean-forward="true" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
                     <folding>
                       <element signature="imports" expanded="true" />
+                      <element signature="e#1350#1351#0" expanded="true" />
+                      <element signature="e#1391#1392#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -52,8 +74,8 @@
             <file leaf-file-name="StatystykaAmbassador.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/Statystyka/StatystykaAmbassador.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="170">
-                    <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+                  <state relative-caret-position="558">
+                    <caret line="206" column="41" selection-start-line="206" selection-start-column="41" selection-end-line="206" selection-end-column="41" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -68,16 +90,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="GuiFederate.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GuiFederate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/GuiFederate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="228" lean-forward="true" selection-start-line="228" selection-end-line="228" />
+            <state relative-caret-position="394">
+              <caret line="225" column="8" selection-start-line="225" selection-start-column="8" selection-end-line="225" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,8 +105,32 @@
       <file leaf-file-name="GuiAmbassador.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/GuiAmbassador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+            <state relative-caret-position="204">
+              <caret line="196" column="91" selection-start-line="196" selection-start-column="91" selection-end-line="196" selection-end-column="91" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObslugaFederate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Obsluga/ObslugaFederate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="223" column="8" selection-start-line="223" selection-start-column="8" selection-end-line="223" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObslugaAmbassador.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Obsluga/ObslugaAmbassador.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-408">
+              <caret line="26" column="49" lean-forward="true" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,8 +141,8 @@
       <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+            <state relative-caret-position="479">
+              <caret line="50" column="62" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,7 +153,7 @@
       <file leaf-file-name="KlientFederate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Klient/KlientFederate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2057">
+            <state relative-caret-position="-1105">
               <caret line="143" selection-start-line="143" selection-end-line="143" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -130,8 +171,8 @@
       <file leaf-file-name="MSK_Fom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/foms/MSK_Fom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="188" column="39" selection-start-line="188" selection-start-column="39" selection-end-line="188" selection-end-column="39" />
+            <state relative-caret-position="469">
+              <caret line="200" column="46" selection-start-line="200" selection-start-column="46" selection-end-line="200" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -139,8 +180,20 @@
       <file leaf-file-name="MSK_Projekt.fed" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MSK_Projekt.fed">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-188">
+            <state>
               <caret column="4" selection-start-column="4" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StatystykaFederate.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Statystyka/StatystykaFederate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="184" column="8" selection-start-line="184" selection-start-column="8" selection-end-line="184" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -174,14 +227,14 @@
         <option value="$PROJECT_DIR$/src/Obsluga/ObslugaAmbassador.java" />
         <option value="$PROJECT_DIR$/src/Obsluga/ObslugaFederate.java" />
         <option value="$PROJECT_DIR$/MSK_Projekt.fed" />
-        <option value="$PROJECT_DIR$/src/Statystyka/StatystykaGui.java" />
         <option value="$PROJECT_DIR$/src/Statystyka/StatystykaAmbassador.java" />
-        <option value="$PROJECT_DIR$/src/Statystyka/StatystykaFederate.java" />
-        <option value="$PROJECT_DIR$/foms/MSK_Fom.xml" />
         <option value="$PROJECT_DIR$/src/Bankomat/BankomatFederate.java" />
-        <option value="$PROJECT_DIR$/src/GUI/GuiAmbassador.java" />
+        <option value="$PROJECT_DIR$/src/Statystyka/StatystykaGui.java" />
+        <option value="$PROJECT_DIR$/foms/MSK_Fom.xml" />
         <option value="$PROJECT_DIR$/src/GUI/GUI.java" />
         <option value="$PROJECT_DIR$/src/GUI/GuiFederate.java" />
+        <option value="$PROJECT_DIR$/src/GUI/GuiAmbassador.java" />
+        <option value="$PROJECT_DIR$/src/Statystyka/StatystykaFederate.java" />
       </list>
     </option>
   </component>
@@ -194,10 +247,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="2576" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2608" />
+    <option name="y" value="-15" />
+    <option name="width" value="1449" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -208,8 +261,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -265,6 +316,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -398,9 +451,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.BankomatFederate" />
-        <item itemvalue="Application.StatystykaFederate" />
-        <item itemvalue="Application.ObslugaFederate" />
         <item itemvalue="Application.KlientFederate" />
+        <item itemvalue="Application.ObslugaFederate" />
+        <item itemvalue="Application.StatystykaFederate" />
         <item itemvalue="Application.GuiFederate" />
       </list>
     </recent_temporary>
@@ -420,15 +473,17 @@
       <workItem from="1527622900177" duration="7503000" />
       <workItem from="1527711387620" duration="914000" />
       <workItem from="1527952496023" duration="3119000" />
-      <workItem from="1528210405064" duration="1110000" />
+      <workItem from="1528210405064" duration="2345000" />
+      <workItem from="1528276807365" duration="4912000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48871000" />
+    <option name="totallyTimeSpent" value="55018000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="2576" height="1056" extended-state="7" />
+    <frame x="1912" y="-8" width="2576" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -444,7 +499,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32897604" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Designer" order="6" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19435611" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19594595" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info id="Learn" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -463,34 +518,34 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32897604" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.23093683" />
       <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="0" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25692964" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="6" />
       <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32897604" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39978212" />
-      <window_info id="Learn" order="7" />
-      <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32897604" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="4" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Messages" order="0" />
+      <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25692964" />
+      <window_info id="Learn" order="7" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -814,30 +869,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Obsluga/ObslugaAmbassador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Klient/KlientAmbassador.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Obsluga/ObslugaFederate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2652">
-          <caret line="175" column="17" selection-start-line="175" selection-start-column="17" selection-end-line="175" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -854,9 +889,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MSK_Projekt.fed">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Obsluga/ObslugaAmbassador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="26" column="49" lean-forward="true" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Obsluga/ObslugaFederate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="223" column="8" selection-start-line="223" selection-start-column="8" selection-end-line="223" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Klient/KlientFederate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2057">
+        <state relative-caret-position="-1105">
           <caret line="143" selection-start-line="143" selection-end-line="143" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -870,54 +935,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Statystyka/StatystykaGui.java">
+    <entry file="file://$PROJECT_DIR$/foms/MSK_Fom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="84" column="17" lean-forward="true" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="469">
+          <caret line="200" column="46" selection-start-line="200" selection-start-column="46" selection-end-line="200" selection-end-column="46" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bankomat/BankomatFederate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="218" column="36" selection-start-line="218" selection-start-column="36" selection-end-line="218" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Statystyka/StatystykaAmbassador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MSK_Projekt.fed">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-188">
-          <caret column="4" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/foms/MSK_Fom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="188" column="39" selection-start-line="188" selection-start-column="39" selection-end-line="188" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Statystyka/StatystykaFederate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
+        <state relative-caret-position="558">
+          <caret line="206" column="41" selection-start-line="206" selection-start-column="41" selection-end-line="206" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -926,8 +954,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+        <state relative-caret-position="479">
+          <caret line="50" column="62" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -936,18 +964,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/GuiAmbassador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+        <state relative-caret-position="204">
+          <caret line="196" column="91" selection-start-line="196" selection-start-column="91" selection-end-line="196" selection-end-column="91" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Statystyka/StatystykaGui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="38" column="51" lean-forward="true" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1350#1351#0" expanded="true" />
+            <element signature="e#1391#1392#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/GuiFederate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="228" lean-forward="true" selection-start-line="228" selection-end-line="228" />
+        <state relative-caret-position="394">
+          <caret line="225" column="8" selection-start-line="225" selection-start-column="8" selection-end-line="225" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bankomat/BankomatFederate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="309" column="8" selection-start-line="309" selection-start-column="8" selection-end-line="309" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Statystyka/StatystykaFederate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="184" column="8" selection-start-line="184" selection-start-column="8" selection-end-line="184" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

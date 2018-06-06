@@ -191,6 +191,18 @@
                            dimensions="NA" transportation="HLAreliable" order="TimeStamp"
                            semantics="NA" />
             </interactionClass>
+            <interactionClass
+                    name="WyslijStatystyke"
+                    sharing="PublishSubscribe"
+                    dimensions="NA"
+                    transportation="HLAreliable"
+                    order="Receive"
+                    semantics="NA">
+                <parameter name="Przepustowosc" dataType="HLAfixedArray" updateType="Conditional"
+                           updateCondition="NA" ownership="NoTransfer" sharing="PublishSubscribe"
+                           dimensions="NA" transportation="HLAreliable" order="TimeStamp"
+                           semantics="NA" />
+            </interactionClass>
         </interactionClass>
     </interactions>
 </objectModel>
