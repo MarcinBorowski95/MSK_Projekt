@@ -165,7 +165,7 @@ public class StatystykaFederate {
         try
         {
             rtiamb.destroyFederationExecution( "ExampleFederation" );
-            log( "Destroyed Federation from Klient" );
+            log( "Destroyed Federation from Statystyka" );
         }
         catch( FederationExecutionDoesNotExist dne )
         {

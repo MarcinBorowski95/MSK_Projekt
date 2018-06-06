@@ -163,7 +163,7 @@ public class GuiFederate {
         try
         {
             rtiamb.destroyFederationExecution( "ExampleFederation" );
-            log( "Destroyed Federation from Klient" );
+            log( "Destroyed Federation from GUI" );
         }
         catch( FederationExecutionDoesNotExist dne )
         {
