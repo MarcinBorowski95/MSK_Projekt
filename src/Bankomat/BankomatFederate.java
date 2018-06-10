@@ -299,7 +299,7 @@ public class BankomatFederate {
 
         stopWorkingHandle = rtiamb.getInteractionClassHandle("InteractionRoot.StopWorking");
         fedamb.stopWorkingHandle = stopWorkingHandle;
-        rtiamb.publishInteractionClass(stopWorkingHandle);
+        rtiamb.subscribeInteractionClass(stopWorkingHandle);
 
         informNoMoneyHandle = rtiamb.getInteractionClassHandle("InteractionRoot.InformNoMoney");
         fedamb.informNoMoneyHandle = informNoMoneyHandle;

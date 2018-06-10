@@ -139,8 +139,7 @@ public class KlientFederate {
             if (fedamb.federateTime==0)
                 advanceTime( timeStep );
 
-            sendAddClientInteraction();
-            sendGetMoneyInteraction();
+            sendAddClientInteraction();           sendGetMoneyInteraction();
 
             rtiamb.evokeMultipleCallbacks( 0.1, 0.2 );
             advanceTime( timeStep );
