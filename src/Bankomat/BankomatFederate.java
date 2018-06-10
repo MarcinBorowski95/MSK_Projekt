@@ -37,6 +37,7 @@ public class BankomatFederate {
     private Boolean working = true;
     private int klienci = 0;
     private int obsluzeniKlienci=0;
+    private int obslugaWizytacja = 0;
 
     //Zmienne Handle
     private ObjectClassHandle bankomatHandle;
@@ -54,6 +55,7 @@ public class BankomatFederate {
     protected ParameterHandle getQuantityHandle;
     protected ParameterHandle liczbaKlientow;
     protected ParameterHandle liczbaObsluzonychKlientow;
+    protected ParameterHandle wizytaObslugi;
 
 
     private void log(String message) {
@@ -238,6 +240,8 @@ public class BankomatFederate {
 
     public void startBankomat() {
         this.working = true;
+        ++this.obslugaWizytacja;
+        log("obsluga ilosc osob: " + obslugaWizytacja);
         log("Bankomat is working again");
     }
 
@@ -308,6 +312,7 @@ public class BankomatFederate {
         wyslijWynikiHandle = rtiamb.getInteractionClassHandle("InteractionRoot.WyslijWyniki");
         liczbaKlientow = rtiamb.getParameterHandle(this.wyslijWynikiHandle, "liczbaKlientow");
         liczbaObsluzonychKlientow = rtiamb.getParameterHandle(this.wyslijWynikiHandle, "liczbaObsluzonychKlientow");
+        wizytaObslugi = rtiamb.getParameterHandle(this.wyslijWynikiHandle, "ileRazyObslugaZawitala");
         rtiamb.publishInteractionClass(wyslijWynikiHandle);
     }
 
@@ -341,8 +346,10 @@ public class BankomatFederate {
         HLAfloat64Time time = timeFactory.makeTime(fedamb.federateTime + fedamb.federateLookahead);
         HLAinteger32BE klienci = encoderFactory.createHLAinteger32BE( this.klienci );
         HLAinteger32BE obsluzeniKlienci = encoderFactory.createHLAinteger32BE( this.obsluzeniKlienci );
+        HLAinteger32BE obslugaWizyta = encoderFactory.createHLAinteger32BE(this.obslugaWizytacja);
         parameters.put(liczbaObsluzonychKlientow, obsluzeniKlienci.toByteArray());
         parameters.put(liczbaKlientow, klienci.toByteArray());
+        parameters.put(wizytaObslugi,obslugaWizyta.toByteArray());
         rtiamb.sendInteraction(wyslijWynikiHandle, parameters, generateTag(), time);
     }
 

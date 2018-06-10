@@ -177,16 +177,16 @@ public class GuiAmbassador extends NullFederateAmbassador {
 
         builder.append(" handle=" + interactionClass);
 
-        if (interactionClass.equals(federate.wyslijWynikiHandle)) {
+      /*  if (interactionClass.equals(federate.wyslijWynikiHandle)) {
             int liczbaKlientow = EncodingHelpers.decodeInt(theParameters.get(federate.liczbaKlientowHandle));
             int liczbaObsluzonychKlientow = EncodingHelpers.decodeInt(theParameters.get(federate.liczbaObsluzonychKlientowHandle));
             //  int liczbaZniecierpliwionych = EncodingHelpers.decodeInt(theParameters.get(federate.liczbaZniecierpliwionychHandle));
-          /*  int iloscWyplaconejGotowki = EncodingHelpers.decodeInt(theParameters.get(federate.iloscWyplaconejGotowki));
+          *//*  int iloscWyplaconejGotowki = EncodingHelpers.decodeInt(theParameters.get(federate.iloscWyplaconejGotowki));
             int iloscWplaconejGotowki = EncodingHelpers.decodeInt(theParameters.get(federate.iloscWplaconejGotowkiHandle));
-            int ileRazyObsluga = EncodingHelpers.decodeInt(theParameters.get(federate.ileRazyObslugaZawitala));*/
+            int ileRazyObsluga = EncodingHelpers.decodeInt(theParameters.get(federate.ileRazyObslugaZawitala));*//*
 
             federate.gui.setStats(liczbaKlientow,liczbaObsluzonychKlientow);
-        }
+        }*/
         if(interactionClass.equals(federate.addMoneyHandle)){
             federate.gui.setStan(true,false);
         }
@@ -195,7 +195,12 @@ public class GuiAmbassador extends NullFederateAmbassador {
         }
         if(interactionClass.equals(federate.wyslijStatystyke)){
             float przepustowosc = EncodingHelpers.decodeFloat(theParameters.get(federate.przepustowosc));
+            int liczbaKlientow = EncodingHelpers.decodeInt(theParameters.get(federate.liczbaKlientowToSentHandle));
+            int liczbaObsluzonych = EncodingHelpers.decodeInt(theParameters.get(federate.liczbaObsluzonychKlientowToSentHandle));
+            int obsluga = EncodingHelpers.decodeInt(theParameters.get(federate.obslugaToSent));
             federate.gui.setPrzepustowosc(przepustowosc);
+            federate.gui.setStats(liczbaKlientow,liczbaObsluzonych);
+            federate.gui.setObsluga(obsluga);
         }
 
 

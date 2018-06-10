@@ -19,6 +19,7 @@ public class StatystykaGui {
     private JLabel przepustowoscText;
     private int liczbaKlientow, liczbaObsluzonych;
     private float przepustowosc;
+    private int obsluga=0;
 
     public StatystykaGui() {
         init();
@@ -38,6 +39,22 @@ public class StatystykaGui {
         liczbaObsluzonychText.setText(String.valueOf(liczbaObsluzonych));
         przepustowoscText.setText(String.valueOf(przepustowosc) + "%");
         //statystykaFederate.endSim();
+    }
+
+    public int getLiczbaKlientow() {
+        return liczbaKlientow;
+    }
+
+    public int getLiczbaObsluzonych() {
+        return liczbaObsluzonych;
+    }
+
+    public int getObsluga() {
+        return obsluga;
+    }
+
+    public void setObsluga(int obsluga) {
+        this.obsluga = obsluga;
     }
 
     public float getPrzepustowosc() {

@@ -44,6 +44,9 @@ public class GuiFederate {
     protected ParameterHandle iloscWplaconejGotowkiHandle;
     protected ParameterHandle ileRazyObslugaZawitala;
     protected ParameterHandle przepustowosc;
+    protected ParameterHandle liczbaKlientowToSentHandle;
+    protected ParameterHandle liczbaObsluzonychKlientowToSentHandle;
+    protected ParameterHandle obslugaToSent;
 
     protected InteractionClassHandle addMoneyHandle;
     protected InteractionClassHandle StopWorkingHandle;
@@ -205,6 +208,7 @@ public class GuiFederate {
         koniecSymulacjiHandle = rtiamb.getInteractionClassHandle("InteractionRoot.koniecSymulacji");
         rtiamb.subscribeInteractionClass(koniecSymulacjiHandle);
 
+        //na to nie powinien subskrybowac
         wyslijWynikiHandle = rtiamb.getInteractionClassHandle("InteractionRoot.WyslijWyniki");
         liczbaObsluzonychKlientowHandle = rtiamb.getParameterHandle(wyslijWynikiHandle,"liczbaObsluzonychKlientow");
         liczbaKlientowHandle = rtiamb.getParameterHandle(wyslijWynikiHandle,"liczbaKlientow");
@@ -222,8 +226,12 @@ public class GuiFederate {
         fedamb.addMoneyHandle = addMoneyHandle;
         rtiamb.subscribeInteractionClass( addMoneyHandle );
 
+        //tutaj powinien dostawac statystyke ze wszystkim
         wyslijStatystyke = rtiamb.getInteractionClassHandle( "InteractionRoot.WyslijStatystyke" );
         przepustowosc = rtiamb.getParameterHandle(wyslijStatystyke,"Przepustowosc");
+        liczbaKlientowToSentHandle = rtiamb.getParameterHandle(wyslijStatystyke, "liczbaKlientowToSent");
+        liczbaObsluzonychKlientowToSentHandle = rtiamb.getParameterHandle(wyslijStatystyke,"liczbaObsluzonychKlientowToSent");
+        obslugaToSent = rtiamb.getParameterHandle(wyslijStatystyke,"obslugaToSent");
         rtiamb.subscribeInteractionClass( wyslijStatystyke );
 
 
