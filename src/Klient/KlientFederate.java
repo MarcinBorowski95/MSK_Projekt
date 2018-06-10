@@ -140,7 +140,10 @@ public class KlientFederate {
                 advanceTime( timeStep );
 
             sendAddClientInteraction();
-            sendGetMoneyInteraction();
+            if(fedamb.federateTime % 3 == 0){
+                log("Fedamb time: " + fedamb.federateTime);
+                sendGetMoneyInteraction();
+            }
 
             rtiamb.evokeMultipleCallbacks( 0.1, 0.2 );
             advanceTime( timeStep );

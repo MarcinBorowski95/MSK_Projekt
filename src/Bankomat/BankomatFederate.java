@@ -17,6 +17,7 @@ import java.io.File;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Random;
 
 
 public class BankomatFederate {
@@ -38,6 +39,7 @@ public class BankomatFederate {
     private int klienci = 0;
     private int obsluzeniKlienci=0;
     private int obslugaWizytacja = 0;
+    private int liczbaZniecierpliwionych = 0;
 
     //Zmienne Handle
     private ObjectClassHandle bankomatHandle;
@@ -56,6 +58,8 @@ public class BankomatFederate {
     protected ParameterHandle liczbaKlientow;
     protected ParameterHandle liczbaObsluzonychKlientow;
     protected ParameterHandle wizytaObslugi;
+    protected ParameterHandle queHandle;
+    protected ParameterHandle liczbaZniecierpliwionychKlientow;
 
 
     private void log(String message) {
@@ -228,8 +232,18 @@ public class BankomatFederate {
     public void addToQueue() throws RTIexception {
         ++this.queue;
         ++this.klienci;
-        sendStatystykiInteraction();
         log("Added to queue, at time: " + fedamb.federateTime + ", current queue: " + this.queue);
+        if(this.queue > 7){
+            log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx: " + this.queue);
+            Random random = new Random();
+            if(random.nextBoolean()){
+                this.removeFromQueue();
+                ++this.liczbaZniecierpliwionych;
+                log("Removed from que: yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy: " +this.queue);
+            }
+        }
+        sendStatystykiInteraction();
+
     }
 
     public void removeFromQueue() {
@@ -313,6 +327,8 @@ public class BankomatFederate {
         liczbaKlientow = rtiamb.getParameterHandle(this.wyslijWynikiHandle, "liczbaKlientow");
         liczbaObsluzonychKlientow = rtiamb.getParameterHandle(this.wyslijWynikiHandle, "liczbaObsluzonychKlientow");
         wizytaObslugi = rtiamb.getParameterHandle(this.wyslijWynikiHandle, "ileRazyObslugaZawitala");
+        queHandle = rtiamb.getParameterHandle(this.wyslijWynikiHandle, "aktualnaKolejka");
+        liczbaZniecierpliwionychKlientow = rtiamb.getParameterHandle(this.wyslijWynikiHandle,"liczbaZniecierpliwionych");
         rtiamb.publishInteractionClass(wyslijWynikiHandle);
     }
 
@@ -347,9 +363,13 @@ public class BankomatFederate {
         HLAinteger32BE klienci = encoderFactory.createHLAinteger32BE( this.klienci );
         HLAinteger32BE obsluzeniKlienci = encoderFactory.createHLAinteger32BE( this.obsluzeniKlienci );
         HLAinteger32BE obslugaWizyta = encoderFactory.createHLAinteger32BE(this.obslugaWizytacja);
+        HLAinteger32BE aktualnaKolejka = encoderFactory.createHLAinteger32BE(this.queue);
+        HLAinteger32BE liczbaZniercier = encoderFactory.createHLAinteger32BE(this.liczbaZniecierpliwionych);
         parameters.put(liczbaObsluzonychKlientow, obsluzeniKlienci.toByteArray());
         parameters.put(liczbaKlientow, klienci.toByteArray());
         parameters.put(wizytaObslugi,obslugaWizyta.toByteArray());
+        parameters.put(queHandle,aktualnaKolejka.toByteArray());
+        parameters.put(liczbaZniecierpliwionychKlientow,liczbaZniercier.toByteArray());
         rtiamb.sendInteraction(wyslijWynikiHandle, parameters, generateTag(), time);
     }
 

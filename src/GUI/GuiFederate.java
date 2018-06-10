@@ -47,6 +47,8 @@ public class GuiFederate {
     protected ParameterHandle liczbaKlientowToSentHandle;
     protected ParameterHandle liczbaObsluzonychKlientowToSentHandle;
     protected ParameterHandle obslugaToSent;
+    protected ParameterHandle queHandleToSent;
+    protected ParameterHandle liczbaZniecierpliwionychKlientowToSentHandle;
 
     protected InteractionClassHandle addMoneyHandle;
     protected InteractionClassHandle StopWorkingHandle;
@@ -232,6 +234,8 @@ public class GuiFederate {
         liczbaKlientowToSentHandle = rtiamb.getParameterHandle(wyslijStatystyke, "liczbaKlientowToSent");
         liczbaObsluzonychKlientowToSentHandle = rtiamb.getParameterHandle(wyslijStatystyke,"liczbaObsluzonychKlientowToSent");
         obslugaToSent = rtiamb.getParameterHandle(wyslijStatystyke,"obslugaToSent");
+        queHandleToSent = rtiamb.getParameterHandle(wyslijStatystyke, "kolejkaToSent");
+        liczbaZniecierpliwionychKlientowToSentHandle = rtiamb.getParameterHandle(wyslijStatystyke, "Zniecierpliwieni");
         rtiamb.subscribeInteractionClass( wyslijStatystyke );
 
 

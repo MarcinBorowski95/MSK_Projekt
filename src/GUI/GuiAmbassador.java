@@ -198,9 +198,13 @@ public class GuiAmbassador extends NullFederateAmbassador {
             int liczbaKlientow = EncodingHelpers.decodeInt(theParameters.get(federate.liczbaKlientowToSentHandle));
             int liczbaObsluzonych = EncodingHelpers.decodeInt(theParameters.get(federate.liczbaObsluzonychKlientowToSentHandle));
             int obsluga = EncodingHelpers.decodeInt(theParameters.get(federate.obslugaToSent));
+            int que = EncodingHelpers.decodeInt(theParameters.get(federate.queHandleToSent));
+            int zniecierpliwieni = EncodingHelpers.decodeInt(theParameters.get(federate.liczbaZniecierpliwionychKlientowToSentHandle));
             federate.gui.setPrzepustowosc(przepustowosc);
             federate.gui.setStats(liczbaKlientow,liczbaObsluzonych);
             federate.gui.setObsluga(obsluga);
+            federate.gui.setAktualnaKolejka(que);
+            federate.gui.setLiczbaZniecier(zniecierpliwieni);
         }
 
 

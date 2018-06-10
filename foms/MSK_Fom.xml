@@ -194,6 +194,14 @@
                            updateCondition="NA" ownership="NoTransfer" sharing="PublishSubscribe"
                            dimensions="NA" transportation="HLAreliable" order="TimeStamp"
                            semantics="NA" />
+                <parameter name="aktualnaKolejka" dataType="HLAfixedArray" updateType="Conditional"
+                           updateCondition="NA" ownership="NoTransfer" sharing="PublishSubscribe"
+                           dimensions="NA" transportation="HLAreliable" order="TimeStamp"
+                           semantics="NA" />
+                <parameter name="liczbaZniecierpliwionych" dataType="HLAfixedArray" updateType="Conditional"
+                           updateCondition="NA" ownership="NoTransfer" sharing="PublishSubscribe"
+                           dimensions="NA" transportation="HLAreliable" order="TimeStamp"
+                           semantics="NA" />
             </interactionClass>
             <interactionClass
                     name="WyslijStatystyke"
@@ -215,6 +223,14 @@
                            dimensions="NA" transportation="HLAreliable" order="TimeStamp"
                            semantics="NA" />
                 <parameter name="obslugaToSent" dataType="HLAfixedArray" updateType="Conditional"
+                           updateCondition="NA" ownership="NoTransfer" sharing="PublishSubscribe"
+                           dimensions="NA" transportation="HLAreliable" order="TimeStamp"
+                           semantics="NA" />
+                <parameter name="kolejkaToSent" dataType="HLAfixedArray" updateType="Conditional"
+                           updateCondition="NA" ownership="NoTransfer" sharing="PublishSubscribe"
+                           dimensions="NA" transportation="HLAreliable" order="TimeStamp"
+                           semantics="NA" />
+                <parameter name="Zniecierpliwieni" dataType="HLAfixedArray" updateType="Conditional"
                            updateCondition="NA" ownership="NoTransfer" sharing="PublishSubscribe"
                            dimensions="NA" transportation="HLAreliable" order="TimeStamp"
                            semantics="NA" />

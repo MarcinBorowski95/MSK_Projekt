@@ -199,13 +199,17 @@ public class StatystykaAmbassador extends NullFederateAmbassador {
             int liczbaKlientow = EncodingHelpers.decodeInt(theParameters.get(federate.liczbaKlientowHandle));
             int liczbaObsluzonychKlientow = EncodingHelpers.decodeInt(theParameters.get(federate.liczbaObsluzonychKlientowHandle));
             int obslugaZawitala = EncodingHelpers.decodeInt(theParameters.get(federate.ileRazyObslugaZawitala));
-            /*int liczbaZniecierpliwionych = EncodingHelpers.decodeInt(theParameters.get(federate.liczbaZniecierpliwionychHandle));
+            int aktualnaKolejka = EncodingHelpers.decodeInt(theParameters.get(federate.queHandle));
+            int liczbaZniecierpliwionych = EncodingHelpers.decodeInt(theParameters.get(federate.liczbaZniecierpliwionychKlientow));
+            /*
             int iloscWyplaconejGotowki = EncodingHelpers.decodeInt(theParameters.get(federate.iloscWyplaconejGotowki));
             int iloscWplaconejGotowki = EncodingHelpers.decodeInt(theParameters.get(federate.iloscWplaconejGotowkiHandle));*/
 
             //TODO stats?
             federate.statystykaGui.setStats(liczbaKlientow, liczbaObsluzonychKlientow);
             federate.statystykaGui.setObsluga(obslugaZawitala);
+            federate.statystykaGui.setKolejka(aktualnaKolejka);
+            federate.statystykaGui.setLiczbaZniecierpliwionych(liczbaZniecierpliwionych);
 
             System.out.println("Klienci: " + liczbaKlientow);
             System.out.println(" Obsluzeni klienci: " + liczbaObsluzonychKlientow);

@@ -18,6 +18,8 @@ public class GUI {
     private JLabel bankomatStanLabel;
     private JLabel obslugaStanLabel;
     private JLabel obslugaWizytyLabel;
+    private JLabel aktualnaKolejkaLabel;
+    private JLabel liczbaZniecierpliwionychLabel;
 
     private JLabel liczbaKlientowText;
     private JLabel liczbaObsluzonychText;
@@ -25,6 +27,8 @@ public class GUI {
     private JLabel bankomatStanText;
     private JLabel obslugaStanText;
     private JLabel obslugaWizytyText;
+    private JLabel aktualnaKolejkaText;
+    private JLabel liczbaZniecierpliwionychText;
 
     public GUI() {
         init();
@@ -57,6 +61,14 @@ public class GUI {
         obslugaWizytyText.setText(String.valueOf(obsluga));
     }
 
+    public void setAktualnaKolejka(int que){
+        aktualnaKolejkaText.setText(String.valueOf(que));
+    }
+
+    public void setLiczbaZniecier(int i){
+        liczbaZniecierpliwionychText.setText(String.valueOf(i));
+    }
+
 
 
     private void init() {
@@ -78,17 +90,27 @@ public class GUI {
         przepustowoscLabel.setBounds(25,150,200,20);
         przepustowoscLabel.setText("Przepustowość");
 
+        aktualnaKolejkaLabel = new JLabel();
+        aktualnaKolejkaLabel.setBounds(25,200,200,20);
+        aktualnaKolejkaLabel.setText("Aktualna kolejka: ");
+
         bankomatStanLabel = new JLabel();
-        bankomatStanLabel.setBounds(25,200,200,20);
+        bankomatStanLabel.setBounds(25,250,200,20);
         bankomatStanLabel.setText("Stan Bankomatu");
 
         obslugaStanLabel = new JLabel();
-        obslugaStanLabel.setBounds(25,250,200,20);
+        obslugaStanLabel.setBounds(25,300,200,20);
         obslugaStanLabel.setText("Stan Obslugi");
 
         obslugaWizytyLabel = new JLabel();
-        obslugaWizytyLabel.setBounds(25,300,200,20);
+        obslugaWizytyLabel.setBounds(25,350,200,20);
         obslugaWizytyLabel.setText("Ile wizyt obslugi");
+
+        liczbaZniecierpliwionychLabel = new JLabel();
+        liczbaZniecierpliwionychLabel.setBounds(25,400,200,20);
+        liczbaZniecierpliwionychLabel.setText("Liczba zniecierpliwionych: ");
+
+
 
 
         liczbaKlientowText = new JLabel();
@@ -97,12 +119,16 @@ public class GUI {
         liczbaObsluzonychText.setBounds(200,100,200,20);
         przepustowoscText = new JLabel();
         przepustowoscText.setBounds(200,150,200,20);
+        aktualnaKolejkaText = new JLabel();
+        aktualnaKolejkaText.setBounds(200,200,200,20);
         bankomatStanText = new JLabel();
-        bankomatStanText.setBounds(200,200,200,20);
+        bankomatStanText.setBounds(200,250,200,20);
         obslugaStanText = new JLabel();
-        obslugaStanText.setBounds(200,250,200,20);
+        obslugaStanText.setBounds(200,300,200,20);
         obslugaWizytyText = new JLabel();
-        obslugaWizytyText.setBounds(200,300,200,20);
+        obslugaWizytyText.setBounds(200,350,200,20);
+        liczbaZniecierpliwionychText = new JLabel();
+        liczbaZniecierpliwionychText.setBounds(200,400,200,20);
 
 
         bankomatStanText.setText(String.valueOf(true));
@@ -115,6 +141,8 @@ public class GUI {
         frame.add(bankomatStanLabel);
         frame.add(obslugaStanLabel);
         frame.add(obslugaWizytyLabel);
+        frame.add(aktualnaKolejkaLabel);
+        frame.add(liczbaZniecierpliwionychLabel);
 
         frame.add(liczbaKlientowText);
         frame.add(liczbaObsluzonychText);
@@ -122,6 +150,8 @@ public class GUI {
         frame.add(bankomatStanText);
         frame.add(obslugaStanText);
         frame.add(obslugaWizytyText);
+        frame.add(aktualnaKolejkaText);
+        frame.add(liczbaZniecierpliwionychText);
 
 
         frame.setVisible(true);

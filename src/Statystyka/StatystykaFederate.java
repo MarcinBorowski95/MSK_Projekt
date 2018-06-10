@@ -37,9 +37,11 @@ public class StatystykaFederate {
     protected InteractionClassHandle koniecSymulacjiHandle;
     protected InteractionClassHandle wyslijWynikiHandle;
     protected InteractionClassHandle wyslijStatystykeHandle;
-    protected ParameterHandle liczbaZniecierpliwionychHandle;
+
     protected ParameterHandle liczbaObsluzonychKlientowHandle;
     protected ParameterHandle liczbaKlientowHandle;
+    protected ParameterHandle queHandle;
+    protected ParameterHandle liczbaZniecierpliwionychKlientow;
     //fixme ilosc czy liczba gotowki?
     protected ParameterHandle iloscWyplaconejGotowki;
     protected ParameterHandle iloscWplaconejGotowkiHandle;
@@ -47,7 +49,9 @@ public class StatystykaFederate {
     protected ParameterHandle przepustowosc;
     protected ParameterHandle liczbaKlientowToSentHandle;
     protected ParameterHandle liczbaObsluzonychKlientowToSentHandle;
+    protected ParameterHandle liczbaZniecierpliwionychKlientowToSentHandle;
     protected ParameterHandle obslugaToSent;
+    protected ParameterHandle queHandleToSent;
 
 
     private void log(String message) {
@@ -167,11 +171,15 @@ public class StatystykaFederate {
         HLAinteger32BE liczbaKlientow = encoderFactory.createHLAinteger32BE(statystykaGui.getLiczbaKlientow());
         HLAinteger32BE liczbaObsluzonychKlientow = encoderFactory.createHLAinteger32BE(statystykaGui.getLiczbaObsluzonych());
         HLAinteger32BE obsluga = encoderFactory.createHLAinteger32BE(statystykaGui.getObsluga());
+        HLAinteger32BE kolejka = encoderFactory.createHLAinteger32BE(statystykaGui.getKolejka());
+        HLAinteger32BE zniecierpliwnieni = encoderFactory.createHLAinteger32BE(statystykaGui.getLiczbaZniecierpliwionych());
 
         parameters.put(przepustowosc, przepustowoscFloat.toByteArray());
-        parameters.put(liczbaKlientowToSentHandle,liczbaKlientow.toByteArray());
-        parameters.put(liczbaObsluzonychKlientowToSentHandle,liczbaObsluzonychKlientow.toByteArray());
+        parameters.put(liczbaKlientowToSentHandle, liczbaKlientow.toByteArray());
+        parameters.put(liczbaObsluzonychKlientowToSentHandle, liczbaObsluzonychKlientow.toByteArray());
         parameters.put(obslugaToSent, obsluga.toByteArray());
+        parameters.put(queHandleToSent, kolejka.toByteArray());
+        parameters.put(liczbaZniecierpliwionychKlientowToSentHandle,zniecierpliwnieni.toByteArray());
 
         log("Sending Przepustowosc: " + statystykaGui.getPrzepustowosc());
         rtiamb.sendInteraction(wyslijStatystykeHandle, parameters, generateTag(), time);
@@ -205,8 +213,9 @@ public class StatystykaFederate {
         wyslijWynikiHandle = rtiamb.getInteractionClassHandle("InteractionRoot.WyslijWyniki");
         liczbaObsluzonychKlientowHandle = rtiamb.getParameterHandle(wyslijWynikiHandle, "liczbaObsluzonychKlientow");
         liczbaKlientowHandle = rtiamb.getParameterHandle(wyslijWynikiHandle, "liczbaKlientow");
-        ileRazyObslugaZawitala = rtiamb.getParameterHandle(wyslijWynikiHandle,"ileRazyObslugaZawitala");
-
+        ileRazyObslugaZawitala = rtiamb.getParameterHandle(wyslijWynikiHandle, "ileRazyObslugaZawitala");
+        queHandle = rtiamb.getParameterHandle(wyslijWynikiHandle, "aktualnaKolejka");
+        liczbaZniecierpliwionychKlientow = rtiamb.getParameterHandle(this.wyslijWynikiHandle,"liczbaZniecierpliwionych");
         /*
         liczbaZniecierpliwionychHandle = rtiamb.getParameterHandle(wyslijWynikiHandle,"liczbaZniecierpliwionychKlientow");
         iloscWplaconejGotowkiHandle = rtiamb.getParameterHandle(wyslijWynikiHandle,"iloscWplaconejGotowki");
@@ -217,8 +226,10 @@ public class StatystykaFederate {
         wyslijStatystykeHandle = rtiamb.getInteractionClassHandle("InteractionRoot.WyslijStatystyke");
         przepustowosc = rtiamb.getParameterHandle(wyslijStatystykeHandle, "Przepustowosc");
         liczbaKlientowToSentHandle = rtiamb.getParameterHandle(wyslijStatystykeHandle, "liczbaKlientowToSent");
-        liczbaObsluzonychKlientowToSentHandle = rtiamb.getParameterHandle(wyslijStatystykeHandle,"liczbaObsluzonychKlientowToSent");
-        obslugaToSent = rtiamb.getParameterHandle(wyslijStatystykeHandle,"obslugaToSent");
+        liczbaObsluzonychKlientowToSentHandle = rtiamb.getParameterHandle(wyslijStatystykeHandle, "liczbaObsluzonychKlientowToSent");
+        obslugaToSent = rtiamb.getParameterHandle(wyslijStatystykeHandle, "obslugaToSent");
+        queHandleToSent = rtiamb.getParameterHandle(wyslijStatystykeHandle, "kolejkaToSent");
+        liczbaZniecierpliwionychKlientowToSentHandle = rtiamb.getParameterHandle(wyslijStatystykeHandle, "Zniecierpliwieni");
         rtiamb.publishInteractionClass(wyslijStatystykeHandle);
     }
 

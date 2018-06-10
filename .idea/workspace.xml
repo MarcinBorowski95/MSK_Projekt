@@ -1,28 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/Klient/KlientFederate.java" line="184" />
+    <bookmark url="file://$PROJECT_DIR$/src/Klient/KlientFederate.java" line="187" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38de6158-1d13-42a4-ba97-769476046d99" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foms/MSK_Fom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/foms/MSK_Fom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/Bankomat/BankomatFederate$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/Bankomat/BankomatFederate$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/Bankomat/BankomatFederate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/Bankomat/BankomatFederate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/GUI/GUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/GUI/GUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/GUI/GUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/GUI/GUI$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/GUI/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/GUI/GUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/GUI/GuiAmbassador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/GUI/GuiAmbassador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/GUI/GuiFederate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/GUI/GuiFederate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/Statystyka/StatystykaAmbassador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/Statystyka/StatystykaAmbassador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/Statystyka/StatystykaFederate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/Statystyka/StatystykaFederate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/Statystyka/StatystykaGui$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/Statystyka/StatystykaGui$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/Statystyka/StatystykaGui$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/Statystyka/StatystykaGui$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MSK_Projekt/Statystyka/StatystykaGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MSK_Projekt/Statystyka/StatystykaGui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/portico.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/portico.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bankomat/BankomatFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bankomat/BankomatFederate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/GuiAmbassador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GuiAmbassador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/GuiFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GuiFederate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Klient/KlientFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Klient/KlientFederate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Statystyka/StatystykaAmbassador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Statystyka/StatystykaAmbassador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Statystyka/StatystykaFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Statystyka/StatystykaFederate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Statystyka/StatystykaGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Statystyka/StatystykaGui.java" afterDir="false" />
@@ -45,20 +34,23 @@
       <content type="file-editors">
         <state>
           <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="BankomatFederate.java" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/Bankomat/BankomatFederate.java">
+            <file leaf-file-name="MSK_Fom.xml" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/foms/MSK_Fom.xml">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="5644">
-                    <caret line="351" column="23" selection-start-line="351" selection-start-column="23" selection-end-line="351" selection-end-column="23" />
+                  <state relative-caret-position="796">
+                    <caret line="232" column="49" selection-start-line="232" selection-start-column="49" selection-end-line="232" selection-end-column="49" />
                   </state>
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="MSK_Fom.xml" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/foms/MSK_Fom.xml">
+            <file leaf-file-name="StatystykaFederate.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/Statystyka/StatystykaFederate.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="354">
-                    <caret line="192" column="55" selection-start-line="192" selection-start-column="55" selection-end-line="192" selection-end-column="55" />
+                  <state relative-caret-position="254">
+                    <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                    </folding>
                   </state>
                 </provider>
               </entry>
@@ -73,8 +65,8 @@
       <file leaf-file-name="GuiFederate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/GuiFederate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+            <state relative-caret-position="173">
+              <caret line="49" column="46" lean-forward="true" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,23 +74,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GuiAmbassador.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GuiAmbassador.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/GuiAmbassador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="202" column="43" selection-start-line="202" selection-start-column="43" selection-end-line="202" selection-end-column="43" />
+            <state relative-caret-position="537">
+              <caret line="206" column="59" selection-start-line="206" selection-start-column="59" selection-end-line="206" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BankomatFederate.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bankomat/BankomatFederate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="314" column="81" selection-start-line="314" selection-start-column="81" selection-end-line="314" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -106,8 +89,26 @@
       <file leaf-file-name="BankomatAmbassador.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bankomat/BankomatAmbassador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="17">
               <caret line="30" column="49" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KlientFederate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Klient/KlientFederate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="407">
+              <caret line="143" column="57" selection-start-line="143" selection-start-column="57" selection-end-line="143" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1537#1538#0" expanded="true" />
+                <element signature="e#1606#1607#0" expanded="true" />
+                <element signature="e#8495#8496#0" expanded="true" />
+                <element signature="e#8544#8545#0" expanded="true" />
+                <element signature="e#8584#8585#0" expanded="true" />
+                <element signature="e#8661#8662#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,24 +128,16 @@
       <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="56" column="56" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="56" />
+            <state relative-caret-position="1649">
+              <caret line="144" column="8" selection-start-line="144" selection-start-column="8" selection-end-line="144" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1533#1534#0" expanded="true" />
                 <element signature="e#1565#1566#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StatystykaFederate.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Statystyka/StatystykaFederate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="168" column="87" selection-start-line="168" selection-start-column="87" selection-end-line="168" selection-end-column="87" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1726#1727#0" expanded="true" />
+                <element signature="e#1760#1761#0" expanded="true" />
+                <element signature="e#1932#1933#0" expanded="true" />
+                <element signature="e#2003#2004#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -153,26 +146,41 @@
       <file leaf-file-name="StatystykaGui.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Statystyka/StatystykaGui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+            <state relative-caret-position="306">
+              <caret line="69" column="46" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1480#1481#0" expanded="true" />
                 <element signature="e#1510#1511#0" expanded="true" />
                 <element signature="e#1553#1554#0" expanded="true" />
                 <element signature="e#1591#1592#0" expanded="true" />
+                <element signature="e#1651#1652#0" expanded="true" />
+                <element signature="e#1681#1682#0" expanded="true" />
+                <element signature="e#1724#1725#0" expanded="true" />
+                <element signature="e#1762#1763#0" expanded="true" />
+                <element signature="e#1899#1900#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatystykaAmbassador.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StatystykaAmbassador.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Statystyka/StatystykaAmbassador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="207" column="49" lean-forward="true" selection-start-line="207" selection-start-column="49" selection-end-line="207" selection-end-column="49" />
+            <state relative-caret-position="190">
+              <caret line="202" column="128" selection-start-line="202" selection-start-column="128" selection-end-line="202" selection-end-column="128" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BankomatFederate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Bankomat/BankomatFederate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="61" column="4" lean-forward="true" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -201,19 +209,19 @@
         <option value="$PROJECT_DIR$/foms/Bankomat" />
         <option value="$PROJECT_DIR$/src/Bankomat/BankomatAmbassador.java" />
         <option value="$PROJECT_DIR$/src/Klient/KlientAmbassador.java" />
-        <option value="$PROJECT_DIR$/src/Klient/KlientFederate.java" />
         <option value="$PROJECT_DIR$/src/Obsluga/ObslugaExternalEvent.java" />
         <option value="$PROJECT_DIR$/src/Obsluga/ObslugaAmbassador.java" />
         <option value="$PROJECT_DIR$/src/Obsluga/ObslugaFederate.java" />
         <option value="$PROJECT_DIR$/MSK_Projekt.fed" />
+        <option value="$PROJECT_DIR$/src/Klient/KlientFederate.java" />
+        <option value="$PROJECT_DIR$/src/Bankomat/BankomatFederate.java" />
         <option value="$PROJECT_DIR$/src/Statystyka/StatystykaGui.java" />
+        <option value="$PROJECT_DIR$/foms/MSK_Fom.xml" />
+        <option value="$PROJECT_DIR$/src/GUI/GuiFederate.java" />
+        <option value="$PROJECT_DIR$/src/GUI/GuiAmbassador.java" />
+        <option value="$PROJECT_DIR$/src/GUI/GUI.java" />
         <option value="$PROJECT_DIR$/src/Statystyka/StatystykaAmbassador.java" />
         <option value="$PROJECT_DIR$/src/Statystyka/StatystykaFederate.java" />
-        <option value="$PROJECT_DIR$/src/GUI/GuiFederate.java" />
-        <option value="$PROJECT_DIR$/foms/MSK_Fom.xml" />
-        <option value="$PROJECT_DIR$/src/Bankomat/BankomatFederate.java" />
-        <option value="$PROJECT_DIR$/src/GUI/GUI.java" />
-        <option value="$PROJECT_DIR$/src/GUI/GuiAmbassador.java" />
       </list>
     </option>
   </component>
@@ -456,12 +464,12 @@
       <workItem from="1528276807365" duration="5878000" />
       <workItem from="1528382694107" duration="1631000" />
       <workItem from="1528624968141" duration="2691000" />
-      <workItem from="1528633208041" duration="1169000" />
+      <workItem from="1528633208041" duration="7558000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61475000" />
+    <option name="totallyTimeSpent" value="67864000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="2576" height="1056" extended-state="6" />
@@ -478,6 +486,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.32570806" />
       <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3298887" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32897604" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Designer" order="6" />
@@ -493,41 +502,41 @@
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3298887" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32897604" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.23093683" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Messages" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25692964" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="6" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info id="Learn" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32897604" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.39978212" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info id="Image Layers" order="3" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.32570806" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32897604" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32897604" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20071542" />
+      <window_info id="Learn" order="7" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3298887" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32897604" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39978212" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -841,43 +850,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Klient/KlientFederate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2057">
-          <caret line="143" selection-start-line="143" selection-end-line="143" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1537#1538#0" expanded="true" />
-            <element signature="e#1606#1607#0" expanded="true" />
-            <element signature="e#8495#8496#0" expanded="true" />
-            <element signature="e#8544#8545#0" expanded="true" />
-            <element signature="e#8584#8585#0" expanded="true" />
-            <element signature="e#8661#8662#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Obsluga/ObslugaFederate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3468">
           <caret line="223" column="8" selection-start-line="223" selection-start-column="8" selection-end-line="223" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/foms/MSK_Fom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="192" column="55" selection-start-line="192" selection-start-column="55" selection-end-line="192" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/GuiFederate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -894,69 +870,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bankomat/BankomatAmbassador.java">
+    <entry file="file://$PROJECT_DIR$/src/Klient/KlientFederate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="30" column="49" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bankomat/BankomatFederate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="314" column="81" selection-start-line="314" selection-start-column="81" selection-end-line="314" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Statystyka/StatystykaAmbassador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="207" column="49" lean-forward="true" selection-start-line="207" selection-start-column="49" selection-end-line="207" selection-end-column="49" />
+        <state relative-caret-position="407">
+          <caret line="143" column="57" selection-start-line="143" selection-start-column="57" selection-end-line="143" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Statystyka/StatystykaFederate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="168" column="87" selection-start-line="168" selection-start-column="87" selection-end-line="168" selection-end-column="87" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1537#1538#0" expanded="true" />
+            <element signature="e#1606#1607#0" expanded="true" />
+            <element signature="e#8495#8496#0" expanded="true" />
+            <element signature="e#8544#8545#0" expanded="true" />
+            <element signature="e#8584#8585#0" expanded="true" />
+            <element signature="e#8661#8662#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Statystyka/StatystykaGui.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+        <state relative-caret-position="306">
+          <caret line="69" column="46" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1480#1481#0" expanded="true" />
             <element signature="e#1510#1511#0" expanded="true" />
             <element signature="e#1553#1554#0" expanded="true" />
             <element signature="e#1591#1592#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="56" column="56" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1533#1534#0" expanded="true" />
-            <element signature="e#1565#1566#0" expanded="true" />
+            <element signature="e#1651#1652#0" expanded="true" />
+            <element signature="e#1681#1682#0" expanded="true" />
+            <element signature="e#1724#1725#0" expanded="true" />
+            <element signature="e#1762#1763#0" expanded="true" />
+            <element signature="e#1899#1900#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/GuiAmbassador.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="202" column="43" selection-start-line="202" selection-start-column="43" selection-end-line="202" selection-end-column="43" />
+        <state relative-caret-position="537">
+          <caret line="206" column="59" selection-start-line="206" selection-start-column="59" selection-end-line="206" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1649">
+          <caret line="144" column="8" selection-start-line="144" selection-start-column="8" selection-end-line="144" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1533#1534#0" expanded="true" />
+            <element signature="e#1565#1566#0" expanded="true" />
+            <element signature="e#1726#1727#0" expanded="true" />
+            <element signature="e#1760#1761#0" expanded="true" />
+            <element signature="e#1932#1933#0" expanded="true" />
+            <element signature="e#2003#2004#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bankomat/BankomatAmbassador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="30" column="49" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/foms/MSK_Fom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="796">
+          <caret line="232" column="49" selection-start-line="232" selection-start-column="49" selection-end-line="232" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/GuiFederate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="49" column="46" lean-forward="true" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bankomat/BankomatFederate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="61" column="4" lean-forward="true" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Statystyka/StatystykaFederate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Statystyka/StatystykaAmbassador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="202" column="128" selection-start-line="202" selection-start-column="128" selection-end-line="202" selection-end-column="128" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

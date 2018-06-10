@@ -20,6 +20,8 @@ public class StatystykaGui {
     private int liczbaKlientow, liczbaObsluzonych;
     private float przepustowosc;
     private int obsluga=0;
+    private int kolejka = 0;
+    private int liczbaZniecierpliwionych;
 
     public StatystykaGui() {
         init();
@@ -55,6 +57,22 @@ public class StatystykaGui {
 
     public void setObsluga(int obsluga) {
         this.obsluga = obsluga;
+    }
+
+    public int getKolejka() {
+        return kolejka;
+    }
+
+    public void setKolejka(int kolejka) {
+        this.kolejka = kolejka;
+    }
+
+    public int getLiczbaZniecierpliwionych() {
+        return liczbaZniecierpliwionych;
+    }
+
+    public void setLiczbaZniecierpliwionych(int liczbaZniecierpliwionych) {
+        this.liczbaZniecierpliwionych = liczbaZniecierpliwionych;
     }
 
     public float getPrzepustowosc() {
